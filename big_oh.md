@@ -79,7 +79,7 @@ graphs
 ![graphs complexity img][graphs]
 
 
-[big_oh_chart]: imgs/big-oh-chart.png
+[big_oh_chart]: /img/big-oh-chart.png
 [data_sets]: imgs/complexity-ds.png
 [heaps]: imgs/complexity-heaps.png
 [graphs]: imgs/complexity-graphs.png
