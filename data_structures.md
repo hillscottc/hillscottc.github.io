@@ -32,14 +32,15 @@ While a tree only allows a node to have children, and there cannot be any loops 
 
 A very common example used is flight paths between cities. If there is a flight between city A and city B there is an edge between the cities. The *cost* of the edge can be the length of time that it takes for the flight, or perhaps the amount of fuel used.
 
-    structure node
-       [list of nodes] neighbors
-       [data]
-    end
+```python
+structure node
+   [list of nodes] neighbors
+   [data]
+end
 
-    cost(X, Y) := if (X.neighbors contains Y) return X.neighbors[Y];
-             else "Not possible"
-
+cost(X, Y) := if (X.neighbors contains Y) return X.neighbors[Y];
+         else "Not possible"
+```
 
 ### Recognizing a graph problem:
 
