@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Data Structures, Trees and Graphs</title>
+<link rel="stylesheet" type="text/css" href="/study/css/syntax.css">
 </head>
 <body>
 
@@ -37,13 +38,13 @@
 <p>While a tree only allows a node to have children, and there cannot be any loops in the tree, with a more general graph we can represent many different situations.</p>
 
 <p>A very common example used is flight paths between cities. If there is a flight between city A and city B there is an edge between the cities. The <em>cost</em> of the edge can be the length of time that it takes for the flight, or perhaps the amount of fuel used.</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">structure node
-   [list of nodes] neighbors
-   [data]
-end
+<div class="highlight"><pre><code class="python language-python" data-lang="python"><span class="n">structure</span> <span class="n">node</span>
+   <span class="p">[</span><span class="nb">list</span> <span class="n">of</span> <span class="n">nodes</span><span class="p">]</span> <span class="n">neighbors</span>
+   <span class="p">[</span><span class="n">data</span><span class="p">]</span>
+<span class="n">end</span>
 
-cost(X, Y) := if (X.neighbors contains Y) return X.neighbors[Y];
-         else &quot;Not possible&quot;
+<span class="n">cost</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span> <span class="p">:</span><span class="o">=</span> <span class="k">if</span> <span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">neighbors</span> <span class="n">contains</span> <span class="n">Y</span><span class="p">)</span> <span class="k">return</span> <span class="n">X</span><span class="o">.</span><span class="n">neighbors</span><span class="p">[</span><span class="n">Y</span><span class="p">];</span>
+         <span class="k">else</span> <span class="s">&quot;Not possible&quot;</span>
 </code></pre></div>
 <h3>Recognizing a graph problem:</h3>
 
