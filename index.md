@@ -1,10 +1,7 @@
 ---
 layout: default
-title: Home
+title: Study Index
 ---
-
-
-## Study Index
 
 ### Data Structures
 
