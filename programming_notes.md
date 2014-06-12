@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Programming
+title: Programming Notes
 ---
-
-# Programming
 
 ## Recursion
 

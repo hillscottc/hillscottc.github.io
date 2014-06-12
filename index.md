@@ -24,27 +24,32 @@ title: Study Index
 - [Graphics Mask, A Simple Dynamic Problem][graphics_mask]
 - [KiloManX, Ammo Problem][kilo_man_x]
 - Tries and Text
-    - [BFS, The Word Ladder Problem](word_ladder.md)
-    - [Word Find](word_find.md)
-    - [Search Box](search_box.md)
-    - [Cyclic Words](cyclic_words.md)
-    - [Tagalog Dictionary](tagalog.md)
-    - [Joined String](joined_string.md)
-    - [Compund Words](cmpd_words.md)
+    - [BFS, The Word Ladder Problem][word_ladder]
+    - [Word Find][word_find]
+    - [Search Box][search_box]
+    - [Cyclic Words][cyclic_words]
+    - [Tagalog Dictionary][tagalog]
+    - [Joined String][joined_string]
+    - [Compund Words][cmpd_words]
 
+[data_structures]: data_structures.html
+[traversal]: traversal.html
+[suffix_trees]: suffix_trees.html
+[dags]: dags.html
 
-[big_oh]: big_oh.md
-[dags]: dags.md
-[data_structures]: data_structures.md
-[graphics_mask]: graphics_mask.md
-[kilo_man_x]: kilo_man_x.md
-[knights]: knights.md
-[problems_notes]: problems_notes.md
-[programming_notes]: programming_notes.md
-[strongly_connected]: strongly_connected.md
-[suffix_trees]: suffix_trees.md
-[topological]: topological_pancakes.md
-[traversal]: traversal.md
-[word_ladder]: word_ladder
+[big_oh]: big_oh.html
+[programming_notes]: programming_notes.html
 
-
+[problems_notes]: problems/problems_notes.html
+[knights]: problems/knights.html
+[strongly_connected]: problems/strongly_connected.html
+[topological]: problems/topological_pancakes.html
+[graphics_mask]: problems/graphics_mask.html
+[kilo_man_x]: problems/kilo_man_x.html
+[word_ladder]: problems/word_ladder.html
+[word_find]: problems/word_find.html
+[search_box]: problems/search_box.html
+[cyclic_words]: problems/cyclic_words.html
+[tagalog]: problems/tagalog.html
+[joined_string]: problems/joined_string.html
+[cmpd_words]: problems/cmpd_words.html

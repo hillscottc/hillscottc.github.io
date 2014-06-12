@@ -35,43 +35,12 @@ The formal definitions for Big Oh notation are as follows:
 
 ### Search operation complexity, by structure
 
-    Array/List       :  O(   n    )
-    Trees            :  O( log(n) )
-    Adj List         :  O(  |V|   )  # num vertices
-    Adj Matrix       :  O(   1    ) 
-    Incidece List    :  O(  |E|   )  # num edges
-    Incidence Matrix :  O(  |E|   )
-
-
-### Array, hash by ints, hash by strings
-
-Given strings A, B, and C.
-
-- array
-
-        str[3] data;  
-        data = [A, B, C];
-
-
-    > exists = O(n), get_by_pos = O(1), get_by_val = O(n)  
-
-
-- hash by seq of ints
-
-        hash{int:str} data;
-        data = {0:A, 1:B, 2:C};
-
-    > exists = O(n), get_by_pos = O(1), get_by_val = O(n)  
-
-
-- hash with strings
-
-        hash{str:str} data;
-        data = {A:A, B:B, C:C};
-
-    > exists = O(1)  
-    > get_by_pos = O(n), if keys are NOT sorted. Otherwise, O(1)  
-    > get_by_val = O(1), because val is the same as key.
+    Array/List   :    O(n)
+    Trees        :  O(log(n))
+    Adj List     :   O(|V|)  # num vertices
+    Adj Matrix   :    O(1) 
+    Incid List   :   O(|E|)  # num edges
+    Incid Matrix :   O(|E|)
 
 
 basic data structures
