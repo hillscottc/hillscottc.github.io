@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Big Oh</title>
+<link rel="stylesheet" type="text/css" href="/study/css/syntax.css">
 </head>
 <body>
 
@@ -36,43 +37,13 @@ Factorial    f(n) = n!      All permutations of n items
 Merge      :  O( n log(n) )
 </code></pre></div>
 <h3>Search operation complexity, by structure</h3>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">Array/List       :  O(   n    )
-Trees            :  O( log(n) )
-Adj List         :  O(  |V|   )  # num vertices
-Adj Matrix       :  O(   1    ) 
-Incidece List    :  O(  |E|   )  # num edges
-Incidence Matrix :  O(  |E|   )
+<div class="highlight"><pre><code class="text language-text" data-lang="text">Array/List   :    O(n)
+Trees        :  O(log(n))
+Adj List     :   O(|V|)  # num vertices
+Adj Matrix   :    O(1) 
+Incid List   :   O(|E|)  # num edges
+Incid Matrix :   O(|E|)
 </code></pre></div>
-<h3>Array, hash by ints, hash by strings</h3>
-
-<p>Given strings A, B, and C.</p>
-
-<ul>
-<li><p>array</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">str[3] data;  
-data = [A, B, C];
-</code></pre></div>
-<blockquote>
-<p>exists = O(n), get<em>by</em>pos = O(1), get<em>by</em>val = O(n)  </p>
-</blockquote></li>
-<li><p>hash by seq of ints</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">hash{int:str} data;
-data = {0:A, 1:B, 2:C};
-</code></pre></div>
-<blockquote>
-<p>exists = O(n), get<em>by</em>pos = O(1), get<em>by</em>val = O(n)  </p>
-</blockquote></li>
-<li><p>hash with strings</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">hash{str:str} data;
-data = {A:A, B:B, C:C};
-</code></pre></div>
-<blockquote>
-<p>exists = O(1)<br>
-get<em>by</em>pos = O(n), if keys are NOT sorted. Otherwise, O(1)<br>
-get<em>by</em>val = O(1), because val is the same as key.</p>
-</blockquote></li>
-</ul>
-
 <p>basic data structures
 <img src="https://hillscottc.github.io/img/complexity-ds.png" alt="basic structures complexity img"></p>
 

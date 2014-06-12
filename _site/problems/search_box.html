@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Search Box</title>
+<link rel="stylesheet" type="text/css" href="/study/css/syntax.css">
+</head>
+<body>
+
+
+    <h1>Search Box</h1>
+
+    <h2>Search Box</h2>
+
+<p>TopCoder problem &quot;SearchBox&quot; used in SRM 361 (Division II Level One)</p>
+
+<p>Problem Statement</p>
+
+<p>You are writing a simple text editor, and one of the features you need to implement is a text search. Given a pattern, the search mechanism should return the position of its first occurrence, starting from the current position, or indicate that the pattern cannot be found. Searches are case sensitive, and do not wrap. The search dialog contains a text box and a checkbox labeled &quot;Whole Word&quot;. When the &quot;Whole Word&quot; option is selected, the matched sequence must either be preceded by a space to its left or be at the very beginning of the text. Similarly, it must also either be followed by a space to its right or be at the very end of the text.
+You are given a String text consisting of letters and spaces. You are also given a String search, a sequence of letters representing the search pattern, and a String wholeWord, which is either &quot;Y&quot; or &quot;N&quot;, indicating whether or not the &quot;Whole Word&quot; option is checked. An int start represents the current position in the text from where you start searching. Return the index of the first match, or -1 if there is none. The index of the match here means the index of its first character. Both the starting index and the return index are zero based.</p>
+
+<p>Definition</p>
+
+<p>Class:     SearchBox
+Method:     find
+Parameters:     String, String, String, int
+Returns:     int
+Method signature:     int find(String text, String search, String wholeWord, int start)
+(be sure your method is public)</p>
+
+<p>Constraints
+-     text will contain between 1 and 50 characters, inclusive.
+-     text will contain only letters (&#39;a&#39;-&#39;z&#39;, &#39;A&#39;-&#39;Z&#39;) and spaces.
+-     search will contain between 1 and 50 characters, inclusive.
+-     search will contain only letters (&#39;a&#39;-&#39;z&#39;, &#39;A&#39;-&#39;Z&#39;).
+-     wholeWord will contain a single letter &#39;Y&#39; or &#39;N&#39;.
+-     start will be between 0 and N-1, inclusive, where N is the number of characters in text.</p>
+
+<p>Examples
+0)    </p>
+
+<p>&quot;We dont need no education&quot;
+&quot;ed&quot;
+&quot;N&quot;
+13
+Returns: 16
+The whole text has two occurrences of &quot;ed&quot;, but since we start the search at the 13th character we find the second one.
+1)    </p>
+
+<p>&quot;We dont need no thought control&quot;
+&quot;We&quot;
+&quot;Y&quot;
+0
+Returns: 0
+&quot;We&quot; is exactly at the beginning of the text.
+2)    </p>
+
+<p>&quot;No dark sarcasm in the classroom&quot;
+&quot;The&quot;
+&quot;Y&quot;
+5
+Returns: -1
+Remember that the search is case sensitive.
+3)    </p>
+
+<p>&quot;Teachers leave them kids alone&quot;
+&quot;kid&quot;
+&quot;Y&quot;
+1
+Returns: -1
+With the &quot;Whole Word&quot; option selected the &quot;kid&quot; won&#39;t be matched even though it&#39;s present in &quot;kids&quot;.
+4)    </p>
+
+<p>&quot;All in all its just another brick in the wall&quot;
+&quot;all&quot;
+&quot;Y&quot;
+9
+Returns: -1
+5)    </p>
+
+<p>&quot;All in all youre just another brick in the wall&quot;
+&quot;just&quot;
+&quot;Y&quot;
+17
+Returns: 17
+Problem url: http://www.topcoder.com/stat?c=problem<em>statement&amp;pm=8019
+Problem stats url: http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10773&amp;pm=8019
+Writer: slex Testers: PabloGilberto , Yarin , Olexiy , ivan</em>metelsky Problem categories: Simple Search, Iteration, String Manipulation</p>
+
+
+</body>
+</html>
