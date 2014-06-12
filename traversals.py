@@ -42,11 +42,12 @@ def bfs_iter(graph, start, visited=None):
 
 
 # https://www.python.org/doc/essays/graphs/
-def find_shortest_path(graph, start, end, path=[]):
+def find_shortest_path(graph, start, end, path=None):
+    path = [] if not path else path
     path = path + [start]
     if start == end:
         return path
-    if not graph.has_key(start):
+    if start not in graph:
         return None
     shortest = None
     for node in graph[start]:
@@ -61,4 +62,3 @@ if __name__ == "__main__":
     print dfs_iter(GRAPH, 'A')
     print bfs_iter(GRAPH, 'A')
     print find_shortest_path(GRAPH, 'A', 'C')
-
