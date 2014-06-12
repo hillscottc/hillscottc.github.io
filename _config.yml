@@ -1,8 +1,4 @@
 name: Study
 markdown: redcarpet
 pygments: true
-<<<<<<< HEAD
 baseurl: /study
-=======
-baseurl: /study
->>>>>>> 10e237479c740bc1bf54601d27f48ff504635896
