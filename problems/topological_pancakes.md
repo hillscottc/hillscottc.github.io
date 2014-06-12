@@ -1,3 +1,8 @@
+---
+layout: default
+title: Topological Sorting, Pancake Problem
+---
+
 ## Topological Sorting
 
 Source: [Problem Solving with Algorithms and Data Structures](http://interactivepython.org/courselib/static/pythonds/Graphs/graphdfs.html#topological-sorting)

@@ -1,3 +1,8 @@
+---
+layout: default
+title: Tagalog Dictionary
+---
+
 ## Tagalog Dictionary
 
 TopCoder problem "TagalogDictionary" used in SRM 342 (Division I Level One , Division II Level Two)

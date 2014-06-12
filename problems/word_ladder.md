@@ -1,3 +1,8 @@
+---
+layout: default
+title: The Word Ladder Problem
+---
+
 ## BFS, The Word Ladder Problem
 
 To begin our study of graph algorithms let’s consider the following puzzle called a word ladder. Transform the word “FOOL” into the word “SAGE”. In a word ladder puzzle you must make the change occur gradually by changing one letter at a time. At each step you must transform one word into another word, you are not allowed to transform a word into a non-word. The word ladder puzzle was invented in 1878 by Lewis Carroll, the author of Alice in Wonderland. The following sequence of words shows one possible solution to the problem posed above.
@@ -20,18 +25,18 @@ Not surprisingly, since this chapter is on graphs, we can solve this problem usi
 - Use a bfs to find an efficient path from the starting word to the ending word.
 
 
-### Building the Word Ladder Graph¶
+### Building the Word Ladder Graph
 
 Our first problem is to figure out how to turn a large collection of words into a graph. What we would like is to have an edge from one word to another if the two words are only different by a single letter. If we can create such a graph, then any path from one word to another is a solution to the word ladder puzzle. Figure 1 shows a small graph of some words that solve the FOOL to SAGE word ladder problem. Notice that the graph is an undirected graph and that the edges are unweighted.
 
-![Figure 1: A Small Word Ladder Graph](fig_1)
+![Figure 1: A Small Word Ladder Graph][fig_1]
 
 We could use several different approaches to create the graph we need to solve this problem. Let’s start with the assumption that we have a list of words that are all the same length. As a starting point, we can create a vertex in the graph for every word in the list. To figure out how to connect the words, we could compare each word in the list with every other. When we compare we are looking to see how many letters are different. If the two words in question are different by only one letter, we can create an edge between them in the graph. For a small set of words that approach would work fine; however let’s suppose we have a list of 5,110 words. Roughly speaking, comparing one word to every other word on the list is an O(n2) algorithm. For 5,110 words, n2 is more than 26 million comparisons.
 
 We can do much better by using the following approach. Suppose that we have a huge number of buckets, each of them with a four-letter word on the outside, except that one of the letters in the label has been replaced by an underscore. For example, consider Figure 2, we might have a bucket labeled “pop_.” As we process each word in our list we compare the word with each bucket, using the ‘_’ as a wildcard, so both “pope” and “pops” would match “pop_.” Every time we find a matching bucket, we put our word in that bucket. Once we have all the words in the appropriate buckets we know that all the words in the bucket must be connected.
 
 
-![Figure 2: Word Buckets for Words That are Different by One Letter](fig_2)
+![Figure 2: Word Buckets for Words That are Different by One Letter][fig_2]
 
 
 In Python, we can implement the scheme we have just described by using a dictionary. The labels on the buckets we have just described are the keys in our dictionary. The value stored for that key is a list of words. Once we have the dictionary built we can create the graph. We start our graph by creating a vertex for each word in the graph. Then we create edges between all the vertices we find for words found under the same key in the dictionary. Listing 1 shows the Python code required to build the graph.
@@ -110,18 +115,18 @@ from pythonds.basic import Queue
 
 Let’s look at how the bfs function would construct the breadth first tree corresponding to the graph in Figure 1. Starting from fool we take all nodes that are adjacent to fool and add them to the tree. The adjacent nodes include pool, foil, foul, and cool. Each of these nodes are added to the queue of new nodes to expand. Figure 3 shows the state of the in-progress tree along with the queue after this step.
 
-![Figure 3: The First Step in the Breadth First Search](fig_3)
+![Figure 3: The First Step in the Breadth First Search][fig_3]
 
 In the next step bfs removes the next node (pool) from the front of the queue and repeats the process for all of its adjacent nodes. However, when bfs examines the node cool, it finds that the color of cool has already been changed to gray. This indicates that there is a shorter path to cool and that cool is already on the queue for further expansion. The only new node added to the queue while examining pool is poll. The new state of the tree and queue is shown in Figure 4.
 
-![Figure 4: The Second Step in the Breadth First Search](fig_4)
+![Figure 4: The Second Step in the Breadth First Search][fig_4]
 
 
 The next vertex on the queue is foil. The only new node that foil can add to the tree is fail. As bfs continues to process the queue, neither of the next two nodes add anything new to the queue or the tree. Figure 5 shows the tree and the queue after expanding all the vertices on the second level of the tree.
 
 
-![Figure 5: Breadth First Search Tree After Completing One Level](fig_5)
-![FIgure 6: Final Breadth First Search Tree](fig_6)
+![Figure 5: Breadth First Search Tree After Completing One Level][fig_5]
+![FIgure 6: Final Breadth First Search Tree][fig_6]
 
 
 You should continue to work through the algorithm on your own so that you are comfortable with how it works. Figure 6 shows the final breadth first search tree after all the vertices in Figure 3 have been expanded. The amazing thing about the breadth first search solution is that we have not only solved the FOOL–SAGE problem we started out with, but we have solved many other problems along the way. We can start at any vertex in the breadth first search tree and follow the predecessor arrows back to the root to find the shortest word ladder from any word back to fool. The function below (Listing 3) shows how to follow the predecessor links to print out the word ladder.

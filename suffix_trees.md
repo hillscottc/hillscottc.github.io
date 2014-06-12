@@ -1,3 +1,7 @@
+---
+layout: default
+title: Suffix Trees and Tries
+---
 # Suffix Trees and Tries
 
 

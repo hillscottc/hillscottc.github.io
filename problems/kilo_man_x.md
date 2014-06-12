@@ -1,3 +1,8 @@
+---
+layout: default
+title: KiloManX, Ammo Problem
+---
+
 ### KiloManX, Ammo Problem
 
 From TopCoders

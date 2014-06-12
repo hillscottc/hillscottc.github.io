@@ -1,3 +1,8 @@
+---
+layout: default
+title: The Knight’s Tour Problem
+---
+
 ## DFS, The Knight’s Tour Problem
 
 Source: [Problem Solving with Algorithms and Data Structures](http://interactivepython.org/courselib/static/pythonds/Graphs/graphdfs.html#)

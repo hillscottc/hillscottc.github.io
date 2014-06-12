@@ -1,3 +1,8 @@
+---
+layout: default
+title: Graphics Mask
+---
+
 ### Graphics Mask
 
 *A Simple Dynamic Programing Problem*

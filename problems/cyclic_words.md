@@ -1,3 +1,8 @@
+---
+layout: default
+title: Cyclic Words
+---
+
 ## Cyclic Words
 
 TopCoder problem "CyclicWords" used in SRM 358 (Division II Level One)

@@ -1,5 +1,8 @@
+---
+layout: default
+title: Graph Traversal ... BFS, DFS, Djikstra
+---
 
-# Graph Traversal ... BFS, DFS, Djikstra
 
 
 While traversing methods, how the keys are printed sometimes make a difference:

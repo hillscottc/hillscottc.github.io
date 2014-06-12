@@ -1,3 +1,8 @@
+---
+layout: default
+title: Search Box
+---
+
 ## Search Box
 
 TopCoder problem "SearchBox" used in SRM 361 (Division II Level One)

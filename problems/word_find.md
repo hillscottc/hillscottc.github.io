@@ -1,3 +1,8 @@
+---
+layout: default
+title: Word Find
+---
+
 ## Word Find
 
 TopCoder problem "WordFind" used in SRM 232 (Division I Level One , Division II Level Two)
