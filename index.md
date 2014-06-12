@@ -32,19 +32,20 @@ title: Study Index
     - [Joined String](joined_string.md)
     - [Compund Words](cmpd_words.md)
 
+[data_structures]: data_structures.md
+[traversal]: traversal.md
+[suffix_trees]: suffix_trees.md
+[dags]: dags.md
 
 [big_oh]: big_oh.md
-[dags]: dags.md
-[data_structures]: data_structures.md
-[graphics_mask]: graphics_mask.md
-[kilo_man_x]: kilo_man_x.md
-[knights]: knights.md
-[problems_notes]: problems_notes.md
 [programming_notes]: programming_notes.md
-[strongly_connected]: strongly_connected.md
-[suffix_trees]: suffix_trees.md
-[topological]: topological_pancakes.md
-[traversal]: traversal.md
-[word_ladder]: word_ladder
+
+[problems_notes]: problems/problems_notes.md
+[graphics_mask]: problems/graphics_mask.md
+[kilo_man_x]: problems/kilo_man_x.md
+[knights]: problems/knights.md
+[strongly_connected]: problems/strongly_connected.md
+[topological]: problems/topological_pancakes.md
+[word_ladder]: problems/word_ladder.md
 
 
