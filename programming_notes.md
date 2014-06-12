@@ -3,6 +3,10 @@ layout: default
 title: Programming Notes
 ---
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 10e237479c740bc1bf54601d27f48ff504635896
 ## Recursion
 
 - [Recursion](recursion.md)
