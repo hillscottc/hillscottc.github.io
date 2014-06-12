@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Data Structures, Trees and Graphs
+title: Trees and Graphs
 ---
 
 - A tree is an undirected graph that is connected and acyclic.

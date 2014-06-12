@@ -3,17 +3,22 @@ layout: default
 title: Study Index
 ---
 
+### Programming
+
+- [Notes][programming_notes]
+- [Big Oh][big_oh]
+- [Recursion][recursion]
+- [Dynamic Programming][dynamic]
+- [Sorting][sorting]
+
+
 ### Data Structures
 
-- [Trees and Graphs][data_structures]
+- [Trees and Graphs][trees_graphs]
 - [Traversal][traversal]
 - [Suffix Trees and Tries][suffix_trees]
 - [Directed Acyclic Graphs (DAG)][dags]
 
-### Programming
-
-- [Big Oh][big_oh]
-- [Notes, recursion, sorting, dynamic, etc.][programming_notes]
 
 ### Problems
 
@@ -33,13 +38,25 @@ title: Study Index
     - [Compund Words][cmpd_words]
 
 
-[data_structures]: data_structures.html
-[traversal]: traversal.html
-[suffix_trees]: suffix_trees.html
-[dags]: dags.html
+### Resources
 
-[big_oh]: big_oh.html
-[programming_notes]: programming_notes.html
+- [Harrington at Loyola, Comp 363: Algorithms](http://anh.cs.luc.edu/363/notes/)
+- [InteractivePython, Problem Solving with Algorithms and Data Structures](http://interactivepython.org/courselib/static/pythonds/index.html)
+- [Vazirani at Berekely, Algorithms](http://www.cs.berkeley.edu/~vazirani/algorithms/)
+
+
+
+[big_oh]: programming/big_oh.html
+[programming_notes]: programming/programming_notes.html
+[recursion]: programming/recursion.html
+[dynamic]: programming/dynamic.html
+[sorting]: programming/sorting.html
+
+
+[trees_graphs]: data_structs/trees_and_graphs.html
+[traversal]: data_structs/traversal.html
+[suffix_trees]: data_structs/suffix_trees.html
+[dags]: data_structs/dags.html
 
 [problems_notes]: problems/problems_notes.html
 [knights]: problems/knights.html
