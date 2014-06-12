@@ -1,0 +1,4 @@
+name: Study
+markdown: redcarpet
+pygments: true
+baseurl: /study
