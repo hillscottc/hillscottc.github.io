@@ -33,8 +33,6 @@ title: Study Index
     - [Compund Words][cmpd_words]
 
 
-- Working?
-
 [data_structures]: data_structures.html
 [traversal]: traversal.html
 [suffix_trees]: suffix_trees.html
