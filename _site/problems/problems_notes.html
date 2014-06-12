@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Problems Notes</title>
+<link rel="stylesheet" type="text/css" href="/study/css/syntax.css">
+</head>
+<body>
+
+
+    <h1>Problems Notes</h1>
+
+    <ul>
+<li>coin change. dynamic. optimization.</li>
+<li>matching brackets, odd num of occurences(ez...use a deque)</li>
+</ul>
+
+<p>Problems still to think:
+- dags</p>
+
+<p>Problems tricky, double check:
+- convex hull
+- skyline
+- sorts
+- maze
+- knapsack</p>
+
+<h2>By Topic:</h2>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">- BFS. (best for first match?)
+    - word_find
+    - bacon
+- DFS. 
+    - knight
+- Dynamic / Optimization
+    - coins
+    - least common substring, sequence
+    - word_find
+- Text 
+    - word find
+    - cmpd_words
+    - cyclical words
+    - joined_string
+    - tagalog
+    - word_ladder
+</code></pre></div>
+<p>Some good questions here:
+- http://interactivepython.org/courselib/static/pythonds/index.html
+- http://leetcode.com/
+- http://xorswap.com/
+- http://topcoder.com</p>
+
+<h3>The Kevin Bacon problem... a graph with an adjacency list representation</h3>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">graph = {
+     &#39;1&#39;: [&#39;2&#39;, &#39;3&#39;, &#39;4&#39;],
+    &#39;2&#39;: [&#39;5&#39;, &#39;6&#39;],
+    &#39;5&#39;: [&#39;9&#39;, &#39;10&#39;],
+    &#39;4&#39;: [&#39;7&#39;, &#39;8&#39;],
+    &#39;7&#39;: [&#39;11&#39;, &#39;12&#39;]}
+</code></pre></div>
+<h3>Other problems...</h3>
+
+<ul>
+<li>Dynamic: 
+
+<ul>
+<li>SRM 150 - Div 1 1000 - RoboCourier</li>
+<li>SRM 194 - Div 1 1000 - IslandFerries</li>
+<li>SRM 198 - Div 1 500 - DungeonEscape</li>
+<li>TCCC &#39;04 Round 4 - 500 - Bombman</li>
+</ul></li>
+</ul>
+
+<h3>Longest Common Substring.</h3>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&quot;&quot;&quot;
+http://stackoverflow.com/questions/2892931/longest-common-substring-from-more-than-two-strings-python
+&quot;&quot;&quot;
+def long_substr(data):
+    substr = &#39;&#39;
+    if len(data) &gt; 1 and len(data[0]) &gt; 0:
+        for i in range(len(data[0])):
+            for j in range(len(data[0])-i+1):
+                if j &gt; len(substr) and all(data[0][i:i+j] in x for x in data):
+                    substr = data[0][i:i+j]
+    return substr
+</code></pre></div>
+<ul>
+<li><p>Convex Hull
+Problem: Find smallest polygon enclosing n points on plane.
+Algo: For each pair of points p1 and p2, determine whether all other points lie to the same side of a straight line through p1 and p2</p></li>
+<li><p>Mazes 
+Naturally represented by graphs, where each graph vertex denotes a junction of the maze, and each graph edge denotes a hallway in the maze. Thus, any graph traversal algorithm must be powerful enough to get us out of an arbitrary maze. For efficiency, we must make sure we don’t get trapped in the maze and visit the same place repeatedly. For correctness, we must do the traversal in a systematic way to guarantee that we get out of the maze. Our search must take us through every edge and vertex in the graph.</p></li>
+<li><p>Test indexing
+You want to find the 10 most popular words in the entire publication of the Wall Street Journal (WSJ). Someone generous has spent the time digitizing the entire WSJ catalog and loading it onto hard disks. It&#39;s so big that we don&#39;t have space for it on a single machine so it&#39;s been split up into pieces onto N machines such that each machine has a separate piece of the entire catalog as a text file. The switch connecting the machines only allows for two machines to communicate at once.</p>
+
+<p>a. First write an indexing function for the text file on a single machine. It should be able to read the entire file and be able to store a count for the number of times each word in the file has been seen. </p>
+
+<p>Example: If the text file contained &quot;Little bunny foo foo&quot;, your index should be able to tell you that &quot;little&quot; appeared one time, &quot;bunny&quot; appeared once, and &quot;foo&quot; appeared twice.</p>
+
+<p>Brainstorming questions: Which data structure would you use and why? Is it efficient with time and memory? Does it give you easy access to the data you put in it?</p>
+
+<p>b. Your next task is to use the populated index on each machine to find the 10 most popular words in the whole WSJ. Remember that the machines can communicate over that switch, but only two at a time.</p>
+
+<p>Let&#39;s pretend that someone has written all the networking code for you. You don&#39;t have to worry about how to make the machines talk to each other. You can just write a function which takes in the index data structure from two different machines and do interesting things with them. You need to write a function which can go through all the indices you created in the previous step and merge them into a single index.</p>
+
+<p>c. The final part is to write a function to traverse the final aggregated index to find the top 10 (or N) words in the WSJ.</p></li>
+<li><p>Given a set of 2-dimensional points, compute a skyline. This was easy. I drew upon a common data structure known as a max heap.</p>
+
+<p>(a) Report the order of the vertices encountered on a breadth-first search starting
+from vertex A. Break all ties by picking the vertices in alphabetical order (i.e.,
+A before Z).
+(b) Report the order of the vertices encountered on a depth-first search starting
+from vertex A. Break all ties by picking the vertices in alphabetical order (i.e.,
+A before Z).</p></li>
+<li><p>Consider a set of movies M1 , M2 , . . . , Mk . 
+There is a set of customers, each one
+of which indicates the two movies they would like to see this weekend. Movies are
+shown on Saturday evening and Sunday evening. Multiple movies may be screened
+at the same time.</p>
+
+<p>You must decide which movies should be televised on Saturday and which on Sun-
+day, so that every customer gets to see the two movies they desire. Is there a
+schedule where each movie is shown at most once? Design an efficient algorithm to
+find such a schedule if one exists.</p></li>
+</ul>
+
+
+</body>
+</html>
