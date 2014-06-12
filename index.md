@@ -3,6 +3,9 @@ layout: default
 title: Study Index
 ---
 
+- [Misc](misc)
+
+
 ### Programming
 
 - [Notes][programming_notes]
@@ -45,7 +48,7 @@ title: Study Index
 - [Vazirani at Berekely, Algorithms](http://www.cs.berkeley.edu/~vazirani/algorithms/)
 
 
-
+[misc]: misc.html
 [big_oh]: programming/big_oh.html
 [programming_notes]: programming/programming_notes.html
 [recursion]: programming/recursion.html
