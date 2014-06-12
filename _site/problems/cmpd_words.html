@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Compound Words</title>
+<link rel="stylesheet" type="text/css" href="/study/css/syntax.css">
+</head>
+<body>
+
+
+    <h1>Compound Words</h1>
+
+    <h2>Compound Words</h2>
+
+<p>TopCoder problem &quot;CmpdWords&quot; used in SRM 268 (Division I Level One , Division II Level Two)</p>
+
+<h3>Problem Statement</h3>
+
+<p>Some languages allow the use of compound words, words that are the concatenation of words from the language&#39;s dictionary.</p>
+
+<p>We have defined a language that consists of a dictionary of distinct words. We want to know whether we should allow the use of compound words constructed by concatenating exactly two distinct dictionary words. </p>
+
+<p>The potential problem is that a compound word is ambiguous if either (or both) of the following conditions applies:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">- the compound word is a dictionary word
+- the compound word can be formed in more than one way.
+</code></pre></div>
+<p>For example, if &quot;am&quot;,&quot;eat&quot;,&quot;a&quot;, &quot;meat&quot;, &quot;hook&quot;, and &quot;meathook&quot; were all in the dictionary, then &quot;meathook&quot; would be ambiguous according to the first condition, and &quot;ameat&quot; would be ambiguous according to the second condition.</p>
+
+<p>Create a class CmpdWords that contains a method ambiguous that is given a String[] dictionary and that returns the number of ambiguous words that would result from allowing the compounding of distinct pairs of dictionary words. An ambiguous word should be counted only once, no matter how many different ways it could be formed.
+Note that compound words are NOT added to the dictionary. So the dictionary {&quot;a&quot;, &quot;b&quot;,&quot;c&quot;} does not allow &quot;abc&quot; as a compound word.</p>
+
+<h3>Definition</h3>
+
+<p>Class:     CmpdWords
+Method:     ambiguous
+Parameters:     String[]
+Returns:     int
+Method signature:     int ambiguous(String[] dictionary)
+(be sure your method is public)</p>
+
+<h3>Constraints</h3>
+
+<ul>
+<li>dictionary will contain between 1 and 50 elements inclusive.</li>
+<li>The elements of dictionary will be distinct.</li>
+<li>Each element of dictionary will contain between 1 and 20 characters inclusive.</li>
+<li>Each character in each element of dictionary will be a lowercase letter &#39;a&#39;-&#39;z&#39;.</li>
+</ul>
+
+<h3>Examples</h3>
+
+<p>0)    </p>
+
+<p>{&quot;am&quot;,&quot;eat&quot;,&quot;a&quot;, &quot;meat&quot;, &quot;hook&quot;,&quot;meathook&quot;}
+Returns: 2
+&quot;meathook&quot; and &quot;ameat&quot; are ambiguous as explained above.
+1)    </p>
+
+<p>{&quot;a&quot;,&quot;b&quot;,&quot;c&quot;}
+Returns: 0
+All the compound words are: &quot;ab&quot;,&quot;ac&quot;,&quot;bc&quot;,&quot;ba&quot;,&quot;ca&quot;,&quot;cb&quot; and none of these is ambiguous.
+2)    </p>
+
+<p>{&quot;a&quot;,&quot;aa&quot;,&quot;aaa&quot;}
+Returns: 3
+The ambiguous words are &quot;aaa&quot;: (&quot;a&quot;+&quot;aa&quot; and &quot;aa&quot;+&quot;a&quot; and &quot;aaa&quot;) &quot;aaaa&quot;: (&quot;a&quot;+&quot;aaa&quot; and &quot;aaa&quot;+&quot;a&quot;) &quot;aaaaa&quot;: (&quot;aa&quot;+&quot;aaa&quot; and &quot;aaa&quot;+&quot;aa&quot;)
+3)    </p>
+
+<p>{&quot;abc&quot;,&quot;bca&quot;,&quot;bab&quot;,&quot;a&quot;}
+Returns: 1
+&quot;abc&quot;+&quot;a&quot; = &quot;a&quot;+&quot;bca&quot;
+Problem url: http://www.topcoder.com/stat?c=problem_statement&amp;pm=3490
+Problem stats url: http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=8001&amp;pm=3490
+Writer: dgoodman Testers: PabloGilberto , brett1479 , Olexiy Problem categories: Brute Force, String Manipulation</p>
+
+
+</body>
+</html>
