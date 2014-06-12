@@ -3,36 +3,30 @@ layout: default
 title: Problems Notes
 ---
 
-# Problems
-
-Not Indexed:
 - coin change. dynamic. optimization.
-- bacon. 
-- [least common substring](tries.md)
 - matching brackets, odd num of occurences(ez...use a deque)
 
 Problems still to think:
 - dags
 
 Problems tricky, double check:
-- bacon
 - convex hull
 - skyline
 - sorts
 - maze
 - knapsack
 
-
 ## By Topic:
     - BFS. (best for first match?)
         - word_find
-        - bacon ?
-    - DFS. (best for check all?)
+        - bacon
+    - DFS. 
         - knight
     - Dynamic / Optimization
         - coins
-    - Text
         - least common substring, sequence
+        - word_find
+    - Text 
         - word find
         - cmpd_words
         - cyclical words
@@ -58,9 +52,6 @@ Some good questions here:
         '7': ['11', '12']}
 
 
-
-
-
 ### Other problems...
 
 
@@ -70,8 +61,12 @@ Some good questions here:
     - SRM 198 - Div 1 500 - DungeonEscape
     - TCCC '04 Round 4 - 500 - Bombman
 
-    ## lcs....for any number or words
+
+### Longest Common Substring.
+
+    """
     http://stackoverflow.com/questions/2892931/longest-common-substring-from-more-than-two-strings-python
+    """
     def long_substr(data):
         substr = ''
         if len(data) > 1 and len(data[0]) > 0:
@@ -80,12 +75,6 @@ Some good questions here:
                     if j > len(substr) and all(data[0][i:i+j] in x for x in data):
                         substr = data[0][i:i+j]
         return substr
-
-
-
-
-
-
 
 
 - Convex Hull

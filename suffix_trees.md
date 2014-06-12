@@ -2,7 +2,6 @@
 layout: default
 title: Suffix Trees and Tries
 ---
-# Suffix Trees and Tries
 
 
 ## Suffix Trees
@@ -22,9 +21,57 @@ Given strings "ABAB" and "BABA", the matrix would look like:
 In this matrix, the 5th column tests the substring ABA of the ABAB sequence.
 So cell [5, 5] compares ABA to BAB ... the lcs is BA, length 2.
 
-
-The other approach is to construct a generalized suffix tree for the strings, 
+Construct a generalized suffix tree for the strings, 
 then find the deepest internal nodes which have leaf nodes from all the strings in the subtree below it.
+
+A basic Suffix Tree imp.
+
+    """http://goo-apple.appspot.com/article/2e8d3c6a-2c38-48b9-96c6-240b4ded253a"""
+    class Node:
+            def __init__(self, start, substr):
+                    self.start = start
+                    self.substr = substr
+                    self.branches = {}
+                  
+    def insert_into_tree(subroot, suffix, start):
+            prefix_len = len(subroot.substr)
+            new_suffix = str(suffix[prefix_len:])
+            if(len(subroot.branches) == 0):
+                    left_child = Node(subroot.start, "")
+                    right_child = Node(start, new_suffix)
+                    subroot.branches[""] = left_child
+                    subroot.branches[new_suffix] = right_child
+            else:
+                    for (substr, node) in subroot.branches.items():
+                            if len(substr) > 0 and new_suffix.startswith(substr):
+                                    insert_into_tree(node, new_suffix, start)
+                                    break
+                    else:
+                            new_child = Node(start, new_suffix)
+                            subroot.branches[new_suffix] = new_child
+                  
+    def build_suffix_tree(t_str):
+            len_str = len(t_str)
+            i = len_str - 1
+            root = Node(len_str, "")
+            while i >= 0:
+                    insert_into_tree(root, str(t_str[i:]), i)
+                    i -= 1
+            return root
+                  
+    def display_all_suffix(subroot, suffix_s_prefix, level = 0):
+            if len(subroot.branches) == 0:
+                    print suffix_s_prefix, level
+                    return
+            for (substr, node) in subroot.branches.items():
+                    display_all_suffix(node, suffix_s_prefix + substr, level + 1)
+                  
+    root = build_suffix_tree("BCABC")
+    display_all_suffix(root, "")
+
+
+
+
 
 ## *Tries* are PREFIX TREES.
 
@@ -100,13 +147,6 @@ Then search the trie with:
     True
 
 Your algorithm here is basically O(N*M*L) (where N is the length of the sentence, M is the number of words you're looking for, and L is the longest word you're looking for) for each sentence.
-
-{}
-
-
-
-
-
 
 
 [suffix_tree]: https://hillscottc.github.io/img/suffix_tree.png

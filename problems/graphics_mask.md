@@ -7,9 +7,15 @@ title: Graphics Mask
 
 *A Simple Dynamic Programing Problem*
 
-This problem essentially asks us to find the number of discrete regions in a grid that has been filled in with some values already. Dealing with grids as graphs is a very powerful technique, and in this case makes the problem quite easy.
+This problem essentially asks us to find the number of discrete regions in a grid that has been filled in with some values already. 
 
-We will define a graph where each node has 4 connections, one each to the node above, left, right and below. However, we can represent these connections implicitly within the grid, we need not build out any new data structures. The structure we will use to represent the grid in grafixMask is a two dimensional array of booleans, where regions that we have already determined to be filled in will be set to true, and regions that are unfilled are set to false.
+Dealing with grids as graphs is a very powerful technique, and in this case makes the problem quite easy.
+
+We will define a graph where each node has 4 connections, one each to the node above, left, right and below. 
+However, we can represent these connections implicitly within the grid, we need not build out any new data structures. 
+
+The structure we will use to represent the grid in grafixMask is a two dimensional array of booleans, 
+where regions that we have already determined to be filled in will be set to true, and regions that are unfilled are set to false.
 
 To set up this array given the data from the problem is very simple, and looks something like this:
 

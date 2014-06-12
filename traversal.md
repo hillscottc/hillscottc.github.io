@@ -28,21 +28,17 @@ Where we want to find any solution to the problem (not necessarily the shortest 
 A classic problem is the The flood-fill operation for a graphic painting application. The concept is to fill a bounded region with a single color. This concept maps extremely well to a Depth First search. The basic concept is to visit a node, then push all of the nodes to be visited onto the stack.
 
 
-    dfs(node start) {
-        stack<node> s;
-        s.push(start);
-        while (s.empty() == false) {
-            top = s.top();
-            s.pop();
+    def dfs_iter(graph, start, visited=None):
+        """Iterative depth-first search of graph."""
+        visited = [] if not visited else visited
 
-            if (top is not marked as visited) {
-                check for termination condition (have we reached the node we want to?)
-                mark top as visited;
-                add all of top's neighbors to the stack.
-            }
-        }
-    }
-
+        q = [start]
+        while q:
+            v = q.pop(0)
+            if v not in visited:
+                visited = visited + [v]
+                q = graph[v] + q
+        return visited
 
 
 ## BREADTH-FIRST
@@ -53,22 +49,18 @@ It has the extremely useful property -- if all of the edges in a graph are unwei
 
 The depth first search is well geared towards problems where we want to find any solution to the problem (not necessarily the shortest path), or to visit all of the nodes in the graph. 
 
-The basic structure of a breadth first search will look this:
 
-    void bfs(node start) {
-        queue<node> s;
-        s.push(start);
-        mark start as visited
-        while (s.empty() == false) {
-            top = s.front();
-            s.pop();
+    def bfs_iter(graph, start, visited=None):
+        """Iterative breadth-first search of graph."""
+        visited = [] if not visited else visited
 
-            check for termination condition (have we reached the node we want to?)
-
-            add all of top's unvisited neighbors to the queue
-            mark all of top's unvisited neighbors as visited
-        }
-    }
+        q = [start]
+        while q:
+            v = q.pop(0)
+            if not v in visited:
+                visited = visited + [v]
+                q = q + graph[v]
+        return visited
 
 
 ## Finding the best path through a graph
