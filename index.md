@@ -26,19 +26,14 @@ title: Study Index
 ### Problems
 
 - [Notes][problems_notes]
-- [DFS, The Knight’s Tour Problem][knights]
+- [The Knight’s Tour Problem - dfs][knights]
 - [Strongly Connected Components][strongly_connected]
-- [Topological Sorting, Pancake Problem][topological]
-- [Graphics Mask, A Simple Dynamic Problem][graphics_mask]
+- [Pancake Problem - Topological Sorting][topological]
+- [Graphics Mask - A Simple Dynamic Problem][graphics_mask]
 - [KiloManX, Ammo Problem][kilo_man_x]
-- Tries and Text
-    - [BFS, The Word Ladder Problem][word_ladder]
-    - [Word Find][word_find]
-    - [Search Box][search_box]
-    - [Cyclic Words][cyclic_words]
-    - [Tagalog Dictionary][tagalog]
-    - [Joined String][joined_string]
-    - [Compund Words][cmpd_words]
+- [BFS, The Word Ladder Problem - Tries][word_ladder]
+
+(List does not include the unanswered.)
 
 
 ### Resources
