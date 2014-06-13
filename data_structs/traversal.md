@@ -3,63 +3,41 @@ layout: default
 title: Graph Traversal ... BFS, DFS, Djikstra
 ---
 
-
-
 While traversing methods, how the keys are printed sometimes make a difference:
 
 - *INORDER* prints the root key BETWEEN subtrees.
 - *preorder* prints keys before, and *postorder* prints keys after subtrees.
 
-Algorithms follow this pattern, roughly:
 
-- If an edge goes to an undiscovered vertex x, mark x discovered and add it to work queue
-- Skip edges that go to a processed vertex.
-- Skip edges that go to a discovered vertex. They've already been added to queue.
+## Breadth-first and Depth-first Traversal
 
-Each undirected edge will be considered exactly twice, once when each of its endpoints is explored.
+Depth-first wander paths...finds any solution to the problem (not necessarily the shortest path), or to visit all of the nodes in the graph. 
 
+Breadth-first is better for shortest paths.
 
-## DEPTH-FIRST
+    """
+    BFS and DFS are IDENTICAL but for one line...
+    putting unvisited nodes to TOP or BOTTOM of list.
+    """
 
-Wander paths with a **stack**  
-
-Where we want to find any solution to the problem (not necessarily the shortest path), or to visit all of the nodes in the graph. 
-
-A classic problem is the The flood-fill operation for a graphic painting application. The concept is to fill a bounded region with a single color. This concept maps extremely well to a Depth First search. The basic concept is to visit a node, then push all of the nodes to be visited onto the stack.
-
-
-    def dfs_iter(graph, start, visited=None):
-        """Iterative depth-first search of graph."""
+    def dfs(graph, start, visited=None):
         visited = [] if not visited else visited
-
         q = [start]
         while q:
             v = q.pop(0)
             if v not in visited:
                 visited = visited + [v]
-                q = graph[v] + q
+                q = graph[v] + q          ## Unvisited to TOP of list!
         return visited
 
-
-## BREADTH-FIRST
-
-Radiate from start with a **queue**
-
-It has the extremely useful property -- if all of the edges in a graph are unweighted (or the same weight) then the first time a node is visited is the shortest path to that node from the source node.
-
-The depth first search is well geared towards problems where we want to find any solution to the problem (not necessarily the shortest path), or to visit all of the nodes in the graph. 
-
-
-    def bfs_iter(graph, start, visited=None):
-        """Iterative breadth-first search of graph."""
+    def bfs(graph, start, visited=None):
         visited = [] if not visited else visited
-
         q = [start]
         while q:
             v = q.pop(0)
-            if not v in visited:
+            if v not in visited:
                 visited = visited + [v]
-                q = q + graph[v]
+                q = q + graph[v]         ## Unvisited to BOTTOM of list!
         return visited
 
 
@@ -93,22 +71,6 @@ The Heap's nice properties:
         }
     }
 
-
-** Dijkstra's Algorithm** (from Interactive Python):  
-
-    from pythonds.graphs import PriorityQueue, Graph, Vertex
-    def dijkstra(aGraph,start):
-        pq = PriorityQueue()
-        start.setDistance(0)
-        pq.buildHeap([(v.getDistance(),v) for v in aGraph])
-        while not pq.isEmpty():
-            currentVert = pq.delMin()
-            for nextVert in currentVert.getConnections():
-                newDist = currentVert.getDistance() + currentVert.getWeight(nextVert)
-                if newDist < nextVert.getDistance():
-                    nextVert.setDistance( newDist )
-                    nextVert.setPred(currentVert)
-                    pq.decreaseKey(nextVert,newDist)
 
 
 ## Floyd-Warshall, All-Pairs Shortest Path
@@ -162,11 +124,4 @@ As you can see, this is extremely simple to remember and type. If the graph is s
                      for v3 in vertices}
                  for v1 in vertices}
         return d
-
-
-
-
-
-
-
 

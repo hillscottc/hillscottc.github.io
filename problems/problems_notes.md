@@ -3,6 +3,30 @@ layout: default
 title: Problems Notes
 ---
 
+
+
+
+
+### Word Ladder
+
+Make collection of nodes that are different by one letter. Turn that into adjacency lists for each word. That's the tricky part. But from there, do a breadth-first search to find the closest. 
+
+    def bfs_iter(graph, start, visited=None):
+        visited = [] if not visited else visited
+        q = [start]
+        while q:
+            v = q.pop(0)
+            if not v in visited:
+                visited = visited + [v]
+                q = q + graph[v]
+        return visited
+
+Or to get the total faster, could use Dijkstra's Algo. (mention) 
+
+
+
+
+
 - coin change. dynamic. optimization.
 - matching brackets, odd num of occurences(ez...use a deque)
 
@@ -16,23 +40,27 @@ Problems tricky, double check:
 - maze
 - knapsack
 
+
+
+
 ## By Topic:
-    - BFS. (best for first match?)
-        - word_find
-        - bacon
-    - DFS. 
-        - knight
-    - Dynamic / Optimization
-        - coins
-        - least common substring, sequence
-        - word_find
-    - Text 
-        - word find
-        - cmpd_words
-        - cyclical words
-        - joined_string
-        - tagalog
-        - word_ladder
+
+- BFS. (best for first match?)
+    - word_find
+    - bacon
+- DFS. 
+    - knight
+- Dynamic / Optimization
+    - coins
+    - least common substring, sequence
+    - word_find
+- Text 
+    - word find
+    - cmpd_words
+    - cyclical words
+    - joined_string
+    - tagalog
+    - word_ladder
 
 
 Some good questions here:
