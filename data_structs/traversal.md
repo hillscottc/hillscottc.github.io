@@ -96,49 +96,19 @@ The Heap's nice properties:
 
 ** Dijkstra's Algorithm** (from Interactive Python):  
 
-    class Graph:
-      def __init__(self):
-        self.nodes = set()
-        self.edges = defaultdict(list)
-        self.distances = {}
-
-      def add_node(self, value):
-        self.nodes.add(value)
-
-      def add_edge(self, from_node, to_node, distance):
-        self.edges[from_node].append(to_node)
-        self.edges[to_node].append(from_node)
-        self.distances[(from_node, to_node)] = distance
-
-
-    def dijsktra(graph, initial):
-      visited = {initial: 0}
-      path = {}
-
-      nodes = set(graph.nodes)
-
-      while nodes: 
-        min_node = None
-        for node in nodes:
-          if node in visited:
-            if min_node is None:
-              min_node = node
-            elif visited[node] < visited[min_node]:
-              min_node = node
-
-        if min_node is None:
-          break
-
-        nodes.remove(min_node)
-        current_weight = visited[min_node]
-
-        for edge in graph.edges[min_node]:
-          weight = current_weight + graph.distance[(min_node, edge)]
-          if edge not in visited or weight < visited[edge]:
-            visited[edge] = weight
-            path[edge] = min_node
-
-      return visited, path
+    from pythonds.graphs import PriorityQueue, Graph, Vertex
+    def dijkstra(aGraph,start):
+        pq = PriorityQueue()
+        start.setDistance(0)
+        pq.buildHeap([(v.getDistance(),v) for v in aGraph])
+        while not pq.isEmpty():
+            currentVert = pq.delMin()
+            for nextVert in currentVert.getConnections():
+                newDist = currentVert.getDistance() + currentVert.getWeight(nextVert)
+                if newDist < nextVert.getDistance():
+                    nextVert.setDistance( newDist )
+                    nextVert.setPred(currentVert)
+                    pq.decreaseKey(nextVert,newDist)
 
 
 ## Floyd-Warshall, All-Pairs Shortest Path
@@ -149,13 +119,54 @@ An excellent problem to test this out on is the Division 2 1000 from SRM 184, Te
 
 Floyd-Warshall is a very powerful technique when the graph is represented by an adjacency matrix. It runs in O(n^3) time, where n is the number of vertices in the graph. However, in comparison to Dijkstra, which only gives us the shortest path from one source to the targets, Floyd-Warshall gives us the shortest paths from all source to all target nodes. There are other uses for Floyd-Warshall as well; it can be used to find connectivity in a graph (known as the Transitive Closure of a graph). 
 
-First, however we will discuss the Floyd Warshall All-Pairs Shortest Path algorithm, which is the most similar to Dijkstra. After running the algorithm on the adjacency matrix the element at adj[i][j] represents the length of the shortest path from node i to node j. The pseudo-code for the algorithm is given below:
+First, however we will discuss the Floyd Warshall All-Pairs Shortest Path algorithm, which is the most similar to Dijkstra. After running the algorithm on the adjacency matrix the element at adj[i][j] represents the length of the shortest path from node i to node j. 
+
+Pseudo-code for the algorithm :
 
     for (k = 1 to n)
        for (i = 1 to n)
            for (j = 1 to n)
                adj[i][j] = min(adj[i][j], adj[i][k] + adj[k][j]);
 
+In Python, it would be:
+
+        vertices = g.keys()
+
+        d = g
+        for v2 in vertices:
+            d = {v1: {v3: min(d[v1][v3], d[v1][v2] + d[v2][v3])
+                     for v3 in vertices}
+                 for v1 in vertices}
+        return d
+
 As you can see, this is extremely simple to remember and type. If the graph is small (less than 100 nodes) then this technique can be used to great effect for a quick submission. 
+
+    def costs_of_shortest_paths(g):
+        """
+        Cost of shortest path between every pair of vertices in a weighted graph.
+
+        >>> inf = float('inf')
+        >>> g = {0: {0: 0,   1: 1,   2: 4},
+        ...      1: {0: inf, 1: 0,   2: 2},
+        ...      2: {0: inf, 1: inf, 2: 0}}
+        >>> fw(g) # doctest: +NORMALIZE_WHITESPACE
+        {0: {0: 0,   1: 1,   2: 3},
+         1: {0: inf, 1: 0,   2: 2},
+         2: {0: inf, 1: inf, 2: 0}}
+        """
+        vertices = g.keys()
+
+        d = g
+        for v2 in vertices:
+            d = {v1: {v3: min(d[v1][v3], d[v1][v2] + d[v2][v3])
+                     for v3 in vertices}
+                 for v1 in vertices}
+        return d
+
+
+
+
+
+
 
 

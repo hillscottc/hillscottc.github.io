@@ -63,6 +63,34 @@ An example of a neighborhood of width 7 and height 5:
 Once you have recognized that the problem is a graph problem it is time to start building up your representation of the graph in memory.
 
 
+### Convert a directed graph to an adjacency matrix
+
+Convert a directed graph to an adjacency matrix.
+
+Note: The distance from a node to itself is 0 and distance from a node to
+an unconnected node is defined to be infinite.
+
+
+    def adj(g):
+        """
+        >>> g = {1: {2: 3, 3: 8, 5: -4},
+        ...      2: {4: 1, 5: 7},
+        ...      3: {2: 4},
+        ...      4: {1: 2, 3: -5},
+        ...      5: {4: 6}}
+        >>> adj(g) # doctest: +NORMALIZE_WHITESPACE
+        {1: {1: 0, 2: 3, 3: 8, 4: inf, 5: -4},
+         2: {1: inf, 2: 0, 3: inf, 4: 1, 5: 7},
+         3: {1: inf, 2: 4, 3: 0, 4: inf, 5: inf},
+         4: {1: 2, 2: inf, 3: -5, 4: 0, 5: inf},
+         5: {1: inf, 2: inf, 3: inf, 4: 6, 5: 0}}
+        """
+        vertices = g.keys()
+        return {v1: {v2: 0 if v1 == v2 else g[v1].get(v2, float('inf'))
+                     for v2 in vertices}
+                for v1 in vertices}
+
+
 ### Singly linked lists
 
 An example of one of the simplest types of graphs is a singly linked list! Now we can start to see the power of the graph data structure, as it can represent very complicated relationships, but also something as simple as a list.
