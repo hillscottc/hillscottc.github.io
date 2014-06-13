@@ -4,7 +4,12 @@ title: Misc
 ---
 
 
-Floyd-Warshall, All-Pairs Shortest Path..As you can see, this is extremely simple to remember and type. If the graph is small (less than 100 nodes) then this technique can be used to great effect for a quick submission. 
+- Floyd-Warshall, All-Pairs Shortest Path..As you can see, this is extremely simple to remember and type. If the graph is small (less than 100 nodes) then this technique can be used to great effect for a quick submission. 
+
+
+### Can code from scratch     
+- 
+
 
 
 

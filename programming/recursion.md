@@ -36,26 +36,6 @@ There are two key ideas in this listing to look at.
         else:
             return nums[0] + sum_nums(nums[1:])
 
-    def echo(txt):
-        """
-        >>> echo('hello')
-        'hello'
-        """      
-        if len(txt) == 1:
-            return txt[0]
-        else:
-            return txt[0] + echo(txt[1:])
-
-    def rev(txt):
-        """
-        >>> rev('hello')
-        'olleh'
-        """      
-        if len(txt) == 1:
-            return txt[0]
-        else:
-            return  rev(txt[1:]) + txt[0]
-
 
 ### Factorial 
 
