@@ -10,7 +10,7 @@ Source: [Problem Solving with Algorithms and Data Structures](http://interactive
 
 To demonstrate that computer scientists can turn just about anything into a graph problem, let’s consider the difficult problem of stirring up a batch of pancakes. The recipe is really quite simple: 1 egg, 1 cup of pancake mix, 1 tablespoon oil, and 3/4 cup of milk. To make pancakes you must heat the griddle, mix all the ingredients together and spoon the mix onto a hot griddle. When the pancakes start to bubble you turn them over and let them cook until they are golden brown on the bottom. Before you eat your pancakes you are going to want to heat up some syrup. Figure 27 illustrates this process as a graph.
 
-![Figure 27: The Steps for Making Pancakes](https://hillscottc.github.io/img/PSADS_27.png)
+![Figure 27: The Steps for Making Pancakes](/img/PSADS_27.png)
 
 
 The difficult thing about making pancakes is knowing what to do first. As you can see from Figure 27 you might start by heating the griddle or by adding any of the ingredients to the pancake mix. To help us decide the precise order in which we should do each of the steps required to make our pancakes we turn to a graph algorithm called the **topological sort**.
@@ -27,10 +27,10 @@ The topological sort is a simple but useful adaptation of a depth first search. 
 Figure 28 shows the depth first forest constructed by dfs on the pancake-making graph shown in Figure 26.
 
 
-![Figure 28: Result of Depth First Search on the Pancake Graph](https://hillscottc.github.io/img/PSADS_28.png)
+![Figure 28: Result of Depth First Search on the Pancake Graph](/img/PSADS_28.png)
 
 Finally, Figure 29 shows the results of applying the topological sort algorithm to our graph. Now all the ambiguity has been removed and we know exactly the order in which to perform the pancake making steps.
 
-![Figure 29: Result of Topological Sort on Directed Acyclic Graph](https://hillscottc.github.io/img/PSADS_29.png)
+![Figure 29: Result of Topological Sort on Directed Acyclic Graph](/img/PSADS_29.png)
 
 

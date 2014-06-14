@@ -10,6 +10,7 @@ Like the robots of Asimov, all recursive algorithms must obey three important la
     3. A recursive algorithm must call itself, recursively.  
 
 ### Sum of a List of Numbers
+
 We will begin our investigation with a simple problem that you already know how to solve without using recursion. Suppose that you want to calculate the sum of a list of numbers such as: [1,3,5,7,9]. An iterative function that computes the sum is shown. The function uses an accumulator variable (theSum) to compute a running total.
 
 We could rewrite the list as a fully parenthesized expression, like this:
@@ -35,26 +36,6 @@ There are two key ideas in this listing to look at.
             return nums[0]
         else:
             return nums[0] + sum_nums(nums[1:])
-
-    def echo(txt):
-        """
-        >>> echo('hello')
-        'hello'
-        """      
-        if len(txt) == 1:
-            return txt[0]
-        else:
-            return txt[0] + echo(txt[1:])
-
-    def rev(txt):
-        """
-        >>> rev('hello')
-        'olleh'
-        """      
-        if len(txt) == 1:
-            return txt[0]
-        else:
-            return  rev(txt[1:]) + txt[0]
 
 
 ### Factorial 

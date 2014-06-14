@@ -73,7 +73,7 @@ A basic Suffix Tree imp.
 
 
 
-## *Tries* are PREFIX TREES.
+## *Tries* are really PREFIX TREES?
 
 ![suffix tree img][suffix_tree]
 
@@ -149,8 +149,8 @@ Then search the trie with:
 Your algorithm here is basically O(N*M*L) (where N is the length of the sentence, M is the number of words you're looking for, and L is the longest word you're looking for) for each sentence.
 
 
-[suffix_tree]: https://hillscottc.github.io/img/suffix_tree.png
+[suffix_tree]: /img/suffix_tree.png
 [suffix_tree_big]: https://gist.github.com/hillscottc/e27f7acbc235f6a3e75d
 [trie_stack]: https://gist.github.com/hillscottc/d60e7fbe714a6a4b8f9b.js
 [tries1]: http://help.topcoder.com/data-science/competing-in-algorithm-challenges/algorithm-tutorials/using-tries/
-[trie_nodes]: https://hillscottc.github.io/img/trie.png
+[trie_nodes]: /img/trie.png

@@ -3,7 +3,7 @@ layout: default
 title: Study Index
 ---
 
-- [Misc](misc)
+- [Misc](misc.html)
 
 
 ### Programming

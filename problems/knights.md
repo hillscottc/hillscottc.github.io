@@ -193,12 +193,12 @@ The starting and finishing times for each node display a property called the par
 The general running time for depth first search is as follows. The loops in dfs both run in O(V), not counting what happens in dfsvisit, since they are executed once for each vertex in the graph. In dfsvisit the loop is executed once for each edge in the adjacency list of the current vertex. Since dfsvisit is only called recursively if the vertex is white, the loop will execute a maximum of once for every edge in the graph or O(E). So, the total time for depth first search is O(V + E).
 
 
-[fig_1]: https://hillscottc.github.io/img/PSADS_1.png
-[fig_3-6]: https://hillscottc.github.io/img/PSADS_3-6.png
-[fig_7-10]: https://hillscottc.github.io/img/PSADS_7-10.png
-[fig_12]: https://hillscottc.github.io/img/PSADS_12.png
-[fig_13]: https://hillscottc.github.io/img/PSADS_13.png
-[fig_14-18]: https://hillscottc.github.io/img/PSADS_14-18.png
-[fig_19-23]: https://hillscottc.github.io/img/PSADS_19-23.png
-[fig_23-26]: https://hillscottc.github.io/img/PSADS_23-26.png
+[fig_1]: /img/PSADS_1.png
+[fig_3-6]: /img/PSADS_3-6.png
+[fig_7-10]: /img/PSADS_7-10.png
+[fig_12]: /img/PSADS_12.png
+[fig_13]: /img/PSADS_13.png
+[fig_14-18]: /img/PSADS_14-18.png
+[fig_19-23]: /img/PSADS_19-23.png
+[fig_23-26]: /img/PSADS_23-26.png
 
