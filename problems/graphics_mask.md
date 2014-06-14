@@ -3,9 +3,52 @@ layout: default
 title: Graphics Mask
 ---
 
-### Graphics Mask
+TopCoder [problem "grafixMask"](http://topcoder.bgcoder.com/print.php?id=677), Division I Level Two SRM 211 
 
-*A Simple Dynamic Programing Problem*
+## Problem Statement
+        
+In one mode of the grafix software package, the user blocks off portions of a masking layer using opaque rectangles. The bitmap used as the masking layer is 400 pixels tall and 600 pixels wide. Once the rectangles have been blocked off, the user can perform painting actions through the remaining areas of the masking layer, known as holes. To be precise, each hole is a maximal collection of contiguous pixels that are not covered by any of the opaque rectangles. Two pixels are contiguous if they share an edge, and contiguity is transitive.
+
+You are given a `String[]` named `rectangles`, the elements of which specify the rects that have been blocked off in the masking layer. Each String in `rectangles` consists of four ints separated by single spaces. The first two ints are top left pixels, and the last two are bottom right. 
+
+The window coords of a pixel are a pair of ints for row and col. Rows are numbered from top to bottom, 0 to 399. Cols are numbered from left to right, 0 to 599.  Rectangles contains between 1 and 50 elements.
+
+Return an int[] containing the area, in pixels, of every hole in the resulting masking area, sorted from smallest area to greatest.
+ 
+Method signature:  `int[] sortedAreas(String[] rectangles)`
+
+### Examples
+ 
+Examples 0
+        
+    {"0 292 399 307"}
+    Returns: { 116800,  116800 }
+
+The masking layer is depicted below in a 1:4 scale diagram.
+
+![diag1](/img/grafixMask_diagram_1.png)
+
+Example 1  
+        
+    {"48 192 351 207", "48 392 351 407", "120 52 135 547", "260 52 275 547"}
+    Returns: { 22816,  192608 }
+
+![diag2](/img/grafixMask_diagram_2.png)
+
+Example 2
+        
+    {"0 192 399 207", "0 392 399 407", "120 0 135 599", "260 0 275 599"}
+    Returns: { 22080,  22816,  22816,  23040,  23040,  23808,  23808,  23808,  23808 }
+
+![diag3](/img/grafixMask_diagram_3.png)
+
+
+
+
+
+
+
+*A Simple Dynamic Programing Problem?*
 
 This problem essentially asks us to find the number of discrete regions in a grid that has been filled in with some values already. 
 

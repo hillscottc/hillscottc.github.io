@@ -52,10 +52,10 @@ graphs
 ![graphs complexity img][graphs]
 
 
-[big_oh_chart]: https://hillscottc.github.io/img/big-oh-chart.png
-[data_sets]: https://hillscottc.github.io/img/complexity-ds.png
-[heaps]: https://hillscottc.github.io/img/complexity-heaps.png
-[graphs]: https://hillscottc.github.io/img/complexity-graphs.png
+[big_oh_chart]: /img/big-oh-chart.png
+[data_sets]: /img/complexity-ds.png
+[heaps]: /img/complexity-heaps.png
+[graphs]: /img/complexity-graphs.png
 
 
 

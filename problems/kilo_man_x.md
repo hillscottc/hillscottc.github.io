@@ -17,7 +17,7 @@ You start off only with the Kilo Buster, which does 1 damage per shot to any bos
 
 Given a String[] damageChart representing all the weapon damages, and a int[] bossHealth showing how much health each boss has, your method should return an int which is the least number of shots that need to be fired to defeat all of the bosses.
 
-Method signature: int leastShots(String[] damageChart, int[] bossHealth)
+Method signature: `int leastShots(String[] damageChart, int[] bossHealth)`
 
 
 ### Constraints

@@ -9,7 +9,7 @@ title: Problems Notes
 
 ### Word Ladder
 
-Make collection of nodes that are different by one letter. Turn that into adjacency lists for each word. That's the tricky part. But from there, do a breadth-first search to find the closest. 
+Make collection of nodes that are different by one letter. Turn that into adjacency lists for each word. That would be the tricky part get right. But from there, do a breadth-first search to find the closest. 
 
     def bfs_iter(graph, start, visited=None):
         visited = [] if not visited else visited
