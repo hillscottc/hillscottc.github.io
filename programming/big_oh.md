@@ -22,6 +22,16 @@ The formal definitions for Big Oh notation are as follows:
     Exponential  f(n) = 2^n     All subsets of n items.
     Factorial    f(n) = n!      All permutations of n items
 
+Approximate completion time for algorithms, n = 100
+
+    O(Log(n))   10-7 seconds
+    O(n)        10-6 seconds
+    O(n*Log(n)) 10-5 seconds
+    O(n2)       10-4 seconds
+    O(n6)       3 minutes
+    O(2n)       1014 years.
+    O(n!)       10142 years.
+
 
 ![Big Oh Chart][big_oh_chart]
 

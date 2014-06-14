@@ -3,8 +3,46 @@ layout: default
 title: Programming Notes
 ---
 
+[TopCoder Algorithm Tutorial](http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=importance_of_algorithms)
 
-- Distributed programming via Map/Reduce [wiki](http://en.wikipedia.org/wiki/MapReduce)
+A *heuristic* is an approximation of something that is relevant to the problem, and is often computed by an algorithm of its own.
+
+
+## Approximate algorithms, NP-complete
+
+There are quite a few important problems for which the best-known algorithm that produces an optimal answer is insufficiently slow for most purposes. The most famous group of these problems is called NP, which stands for **non-deterministic polynomial**. When a problem is said to be NP-complete or NP-hard, it mean no one knows a good way to solve them optimally. Furthermore, if someone did figure out an efficient algorithm for one NP-complete problem, that algorithm would be applicable to all NP-complete problems. 
+
+A good example of an NP-hard problem is the famous traveling salesman problem. A salesman wants to visit N cities, and he knows how long it takes to get from each city to each other city. The question is "how fast can he visit all of the cities?" Since the fastest known algorithm for solving this problem is too slow - and many believe this will always be true - programmers look for sufficiently fast algorithms that give good, but not optimal solutions. 
+
+
+## Maximum Flow
+
+The maximum flow problem has to do with determining the best way to get some sort of stuff from one place to another, through a network of some sort.
+
+The first efficient algorithm for finding the maximum flow was conceived by two Computer Scientists, named Ford and Fulkerson. The algorithm was subsequently named the Ford-Fulkerson algorithm, and is one of the more famous algorithms in computer science. In the last 50 years, a number of improvements have been made to the Ford-Fulkerson algorithm to make it faster, some of which are dauntingly complex. 
+
+Since the problem was first posed, many additional applications have been discovered. The algorithm has obvious relevance to the Internet, where getting as much data as possible from one point to another is important. It also comes up in many business settings, and is an important part of operations research. For example, if you have N employees and N jobs that need to be done, but not every employee can do every job, the max flow algorithm will tell you how to assign your N employees to jobs in such a way that every job gets done, provided that's possible. Graduation, from SRM 200, is a good example of a TopCoder problem that lends itself to a solution using max flow. 
+
+
+## Sequence comparison
+
+Many coders go their entire careers without ever having to implement an algorithm that uses dynamic programming. However, dynamic programming pops up in a number of important algorithms. One algorithm that most programmers have probably used, even though they may not have known it, finds differences between two sequences. More specifically, it calculates the minimum number of insertions, deletions, and edits required to transform sequence A into sequence B. 
+
+For example, lets consider two sequences of letters, "AABAA" and "AAAB". To transform the first sequence into the second, the simplest thing to do is delete the B in the middle, and change the final A into a B. This algorithm has many applications, including some DNA problems and plagiarism detection. However, the form in which many programmers use it is when comparing two versions of the same source code file. If the elements of the sequence are lines in the file, then this algorithm can tell a programmer which lines of code were removed, which ones were inserted, and which ones were modified to get from one version to the next. 
+
+Without dynamic programming, we would have to consider a - you guessed it - exponential number of transformations to get from one sequence to the other. As it is, however, dynamic programming makes for an algorithm with a runtime of only O(N*M), where N and M are the numbers of elements in the two sequences. 
+
+
+## Dynamic Programming
+
+[TopCoder Tutorial](http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=dynProg)
+
+See the [Coins Problems](/problems/coins.html).
+
+
+## Distributed programming via Map/Reduce 
+
+[wiki](http://en.wikipedia.org/wiki/MapReduce)
   > *Map*
   >  The master node takes input, divides it into sub-problems, and distributes them to workers. 
   >  Worker nodes may do this again in turn, leading to a multi-level tree structure. 
@@ -13,15 +51,10 @@ title: Programming Notes
   > *Reduce*
   > The master node collects all the answers and combines them in some way to form the output.
 
-- Concurrency: 
-    Process is in instance. It contains threads. Threads can share resources. Celery. Task queues are a scalable mechanism to distribute work across threads or machines. Celery communicates via messages, using a broker to mediate between clients and workers. To initiate a task a client puts a message on the queue, the broker then delivers the message to a worker. The message broker is an in-memory data structure store. Redis, Gevent. Pykka
 
+## Concurrency: 
 
-- SQL aggregate functions
-
-        SELECT ID, AVG(Bonus) as 'Avg Bonus', SUM(SalesYTD) as 'Year Sales'
-        FROM Sales.Table GROUP BY ID;
-  
+Process is in instance. It contains threads. Threads can share resources. Celery. Task queues are a scalable mechanism to distribute work across threads or machines. Celery communicates via messages, using a broker to mediate between clients and workers. To initiate a task a client puts a message on the queue, the broker then delivers the message to a worker. The message broker is an in-memory data structure store. Redis, Gevent. Pykka
 
 
 ## Memoization

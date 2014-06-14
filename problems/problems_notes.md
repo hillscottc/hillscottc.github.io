@@ -4,9 +4,6 @@ title: Problems Notes
 ---
 
 
-
-
-
 ### Word Ladder
 
 Make collection of nodes that are different by one letter. Turn that into adjacency lists for each word. That would be the tricky part get right. But from there, do a breadth-first search to find the closest. 
@@ -22,8 +19,6 @@ Make collection of nodes that are different by one letter. Turn that into adjace
         return visited
 
 Or to get the total faster, could use Dijkstra's Algo. (mention) 
-
-
 
 
 
