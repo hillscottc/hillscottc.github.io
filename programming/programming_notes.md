@@ -4,17 +4,30 @@ title: Programming Notes
 ---
 
 
-- Distributed programming via Map/Reduce [wiki](http://en.wikipedia.org/wiki/MapReduce)
-  > *Map*
+### Distributed programming via Map/Reduce [wiki](http://en.wikipedia.org/wiki/MapReduce)
+
+- *Map*
+
   >  The master node takes input, divides it into sub-problems, and distributes them to workers. 
   >  Worker nodes may do this again in turn, leading to a multi-level tree structure. 
   >  Worker nodes process the smaller problems, and pass answer back to its master node.
-  >
-  > *Reduce*
+
+-  *Reduce*
+
   > The master node collects all the answers and combines them in some way to form the output.
 
-- Concurrency: 
-    Process is in instance. It contains threads. Threads can share resources. Celery. Task queues are a scalable mechanism to distribute work across threads or machines. Celery communicates via messages, using a broker to mediate between clients and workers. To initiate a task a client puts a message on the queue, the broker then delivers the message to a worker. The message broker is an in-memory data structure store. Redis, Gevent. Pykka
+### Python's functools.reduce()
+
+  `reduce(function, iterable[, initializer])`
+
+Apply function of two arguments cumulatively to the items of iterable, from left to right, so as to reduce the iterable to a single value. 
+
+For example, `reduce(lambda x, y: x+y, [1, 2, 3, 4, 5])` calculates `((((1+2)+3)+4)+5)`.   
+The left argument, `x`, is the accumulated value and the right argument, `y`, is the update value from the iterable.
+
+### Concurrency: 
+
+Process is in instance. It contains threads. Threads can share resources. Celery. Task queues are a scalable mechanism to distribute work across threads or machines. Celery communicates via messages, using a broker to mediate between clients and workers. To initiate a task a client puts a message on the queue, the broker then delivers the message to a worker. The message broker is an in-memory data structure store. Redis, Gevent. Pykka
 
 
 - SQL aggregate functions

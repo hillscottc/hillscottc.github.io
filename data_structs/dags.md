@@ -19,4 +19,17 @@ Topological sorting is the most important operation on directed acyclic graphs (
 The importance of topological sorting is that it gives us an ordering to process each vertex before any of its successors. Suppose the edges represented precedence constraints, such that edge (x, y) means job x must be done before job y. Then, any topological sort defines a legal schedule.
 
 
+### An excellent example, from this [blog post](http://blog.jupo.org/2012/04/06/topological-sorting-acyclic-directed-graphs/)
+
+![An acylic directed graph, fig 1](/img/topological_1.png)
+
+(gist embedded)
+
+<script src="https://gist.github.com/hillscottc/ee407aea701ef342fce0.js"></script>
+
+
+
+
+
+
 
