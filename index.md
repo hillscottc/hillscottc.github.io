@@ -23,12 +23,12 @@ title: Study Index
 
 ### Things to code from memory
 
-- [bfs and dfs traversal](https://gist.github.com/hillscottc/5872513c69398e003fd4)
-- [topo sort](https://gist.github.com/hillscottc/ee407aea701ef342fce0)
-- [nested dicts for suffix tries](https://gist.github.com/hillscottc/d60e7fbe714a6a4b8f9b)
-- [list-to-matrix](https://gist.github.com/hillscottc/7e031d30f174c519a8cd)
-- [longest-common-substring](https://gist.github.com/hillscottc/947a1f5ddd01bdc85c72#file-long_substr-py)
-- [floyd-warshall](https://gist.github.com/hillscottc/61002306aa5b026ed73c)
+- bfs and dfs traversals [gist:traversals](https://gist.github.com/hillscottc/5872513c69398e003fd4)
+- topological sort [gist:topological](https://gist.github.com/hillscottc/ee407aea701ef342fce0)
+- nested dicts for tries [gist:trie](https://gist.github.com/hillscottc/d60e7fbe714a6a4b8f9b)
+- list-to-matrix[gist:list-to-matrix](https://gist.github.com/hillscottc/7e031d30f174c519a8cd)
+- longest common substring [gist:longest-common-substring](https://gist.github.com/hillscottc/947a1f5ddd01bdc85c72#file-long_substr-py)
+- Floyd-Warshall algorithm[gist:floyd-warshall](https://gist.github.com/hillscottc/61002306aa5b026ed73c)
 
 ### Problems
 
