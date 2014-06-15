@@ -8,62 +8,39 @@ title: Study Index
 
 ### Programming
 
-- [Notes][programming_notes]
-- [Big Oh][big_oh]
-- [Recursion][recursion]
-- [Dynamic Programming][dynamic]
-- [Sorting][sorting]
-
+- [Notes](/programming/programming_notes.html)
+- [Big Oh](/programming/big_oh.html)
+- [Recursion](/programming/recursion.html)
+- [Sorting](/programming/sorting.html)
 
 ### Data Structures
 
-- [Trees and Graphs][trees_graphs]
-- [Traversal][traversal]
-- [Suffix Trees and Tries][suffix_trees]
-- [Directed Acyclic Graphs (DAG) and Topological Sorting][dags]
+- [Trees and Graphs](/data_structs/trees_and_graphs.html)
+- [Traversal](/data_structs/traversal.html)
+- [Suffix Trees and Tries](/data_structs/suffix_trees.html)
+- [Directed Acyclic Graphs (DAG) and Topological Sorting](/data_structs/dags.html)
 
+
+### Things to code from memory
+
+- [bfs and dfs traversal](https://gist.github.com/hillscottc/5872513c69398e003fd4)
+- [topo sort](https://gist.github.com/hillscottc/ee407aea701ef342fce0)
+- [nested dicts for suffix tries](https://gist.github.com/hillscottc/d60e7fbe714a6a4b8f9b)
+- [list-to-matrix](https://gist.github.com/hillscottc/7e031d30f174c519a8cd)
+- [longest-common-substring](https://gist.github.com/hillscottc/947a1f5ddd01bdc85c72#file-long_substr-py)
+- [floyd-warshall](https://gist.github.com/hillscottc/61002306aa5b026ed73c)
 
 ### Problems
 
-- [Notes][problems_notes]
-- [The Knight’s Tour Problem - dfs][knights]
-- [Strongly Connected Components][strongly_connected]
-- [Graphics Mask - A Simple Dynamic Problem][graphics_mask]
-- [KiloManX, Ammo Problem][kilo_man_x]
-- [BFS, The Word Ladder Problem - Tries][word_ladder]
+- [Notes](problems/problems_notes.html)
 
-(List does not include the unanswered.)
+#### Sources
 
-
-### Resources
-
-- [Harrington at Loyola, Comp 363: Algorithms](http://anh.cs.luc.edu/363/notes/)
-- [InteractivePython, Problem Solving with Algorithms and Data Structures](http://interactivepython.org/courselib/static/pythonds/index.html)
-- [Vazirani at Berekely, Algorithms](http://www.cs.berkeley.edu/~vazirani/algorithms/)
+- Harrington at Loyola, Comp 363, Algorithms [source](http://anh.cs.luc.edu/363/notes/)
+- InteractivePython, Problem Solving with Algorithms and Data Structures [source](http://interactivepython.org/courselib/static/pythonds/index.html)
+- Vazirani at Berekely, Algorithms [source](http://www.cs.berkeley.edu/~vazirani/algorithms/)
 
 
-[misc]: misc.html
-[big_oh]: programming/big_oh.html
-[programming_notes]: programming/programming_notes.html
-[recursion]: programming/recursion.html
-[dynamic]: programming/dynamic.html
-[sorting]: programming/sorting.html
 
 
-[trees_graphs]: data_structs/trees_and_graphs.html
-[traversal]: data_structs/traversal.html
-[suffix_trees]: data_structs/suffix_trees.html
-[dags]: data_structs/dags.html
 
-[problems_notes]: problems/problems_notes.html
-[knights]: problems/knights.html
-[strongly_connected]: problems/strongly_connected.html
-[graphics_mask]: problems/graphics_mask.html
-[kilo_man_x]: problems/kilo_man_x.html
-[word_ladder]: problems/word_ladder.html
-[word_find]: problems/word_find.html
-[search_box]: problems/search_box.html
-[cyclic_words]: problems/cyclic_words.html
-[tagalog]: problems/tagalog.html
-[joined_string]: problems/joined_string.html
-[cmpd_words]: problems/cmpd_words.html

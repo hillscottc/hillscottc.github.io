@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Directed Acyclic Graphs
+title: Directed Acyclic Graphs (DAGs) and Topological Sorting
 ---
 
 A directed graph with no cycles is called a directed acyclic graph or a DAG. 

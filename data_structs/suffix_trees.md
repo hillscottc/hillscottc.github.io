@@ -106,14 +106,9 @@ From from post on [stackoverflow](http://stackoverflow.com/questions/11015320/ho
 **Nested dictionaries** ... For a large, scalable trie, nested dictionaries might become space inefficient. 
 But they are the easiest approach...just a few lines.
 
+[nested dicts for suffix tries](https://gist.github.com/hillscottc/d60e7fbe714a6a4b8f9b)
+
 Note, The method setdefault() is a get-or-create.
-
-    In [5]: d = {}
-    In [6]: d.setdefault('X', {})
-    Out[6]: {}
-    In [7]: print d
-    {'X': {}}
-
 
     >>> def make_trie(*words):
     ...     root = dict()
@@ -123,11 +118,6 @@ Note, The method setdefault() is a get-or-create.
     ...             current_dict = current_dict.setdefault(letter, {})
     ...         current_dict = current_dict.setdefault('_end_', '_end_')
     ...     return root
-    ...
-    >>> make_trie('foo', 'bar', 'baz', 'barz')
-    {'b': {'a': {'r': {'_end_': '_end_', 'z': {'_end_': '_end_'}},
-                 'z': {'_end_': '_end_'}}},
-     'f': {'o': {'o': {'_end_': '_end_'}}}}
 
 Then search the trie with:
  
@@ -142,9 +132,7 @@ Then search the trie with:
     ...         return True
     ...     else:
     ...         return False
-    ... 
-    >>> in_trie(make_trie('foo', 'bar', 'baz', 'barz'), 'baz')
-    True
+
 
 Your algorithm here is basically O(N*M*L) (where N is the length of the sentence, M is the number of words you're looking for, and L is the longest word you're looking for) for each sentence.
 

@@ -3,24 +3,20 @@ layout: default
 title: Problems Notes
 ---
 
-
-### Word Ladder
-
-Make collection of nodes that are different by one letter. Turn that into adjacency lists for each word. That would be the tricky part get right. But from there, do a breadth-first search to find the closest. 
-
-    def bfs_iter(graph, start, visited=None):
-        visited = [] if not visited else visited
-        q = [start]
-        while q:
-            v = q.pop(0)
-            if not v in visited:
-                visited = visited + [v]
-                q = q + graph[v]
-        return visited
-
-Or to get the total faster, could use Dijkstra's Algo. (mention) 
+- [The Knight’s Tour Problem - dfs][knights]
+- [Strongly Connected Components][strongly_connected]
+- [Graphics Mask - A Simple Dynamic Problem][graphics_mask]
+- [KiloManX, Ammo Problem][kilo_man_x]
+- [BFS, The Word Ladder Problem - Tries][word_ladder]
 
 
+### Summaries
+
+- Word Ladder: Make collection of nodes that are different by one letter. Turn that into adjacency lists for each word. That would be the tricky part get right. But from there, do **BFS** to find the closest. Or, to get the total faster, could use Dijkstra's Algo. 
+
+- Coins: dynamic, optimization
+
+- 
 Problems still to think:
 - dags
 
@@ -34,12 +30,13 @@ Problems tricky, double check:
 
 
 
+
 ## By Topic:
 
-- BFS. (best for first match?)
+- bfs
     - word_find
     - bacon
-- DFS. 
+- dfs
     - knight
 - Dynamic / Optimization
     - coins
@@ -142,5 +139,12 @@ Naturally represented by graphs, where each graph vertex denotes a junction of t
     day, so that every customer gets to see the two movies they desire. Is there a
     schedule where each movie is shown at most once? Design an efficient algorithm to
     find such a schedule if one exists.
+
+
+[knights]: knights.html
+[strongly_connected]: strongly_connected.html
+[graphics_mask]: graphics_mask.html
+[kilo_man_x]: kilo_man_x.html
+[word_ladder]: word_ladder.html
 
 
