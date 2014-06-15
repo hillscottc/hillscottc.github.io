@@ -18,52 +18,16 @@ Algorithms follow this pattern, roughly:
 
 Each undirected edge will be considered exactly twice, once when each of its endpoints is explored.
 
+**DEPTH-FIRST** wander paths with a **stack**.  To find any solution, not necessarily the shortest path). Or to visit all nodes. 
 
-## DEPTH-FIRST
+**BREADTH-FIRST** radiate from start with a **queue**. 
 
-Wander paths with a **stack**  
+(embeded gist, traversals.py)
 
-Where we want to find any solution to the problem (not necessarily the shortest path), or to visit all of the nodes in the graph. 
-
-A classic problem is the The flood-fill operation for a graphic painting application. The concept is to fill a bounded region with a single color. This concept maps extremely well to a Depth First search. The basic concept is to visit a node, then push all of the nodes to be visited onto the stack.
-
-
-    def dfs_iter(graph, start, visited=None):
-        """Iterative depth-first search of graph."""
-        visited = [] if not visited else visited
-
-        q = [start]
-        while q:
-            v = q.pop(0)
-            if v not in visited:
-                visited = visited + [v]
-                q = graph[v] + q
-        return visited
+<script src="https://gist.github.com/hillscottc/5872513c69398e003fd4.js"></script>
 
 
-## BREADTH-FIRST
-
-Radiate from start with a **queue**
-
-It has the extremely useful property -- if all of the edges in a graph are unweighted (or the same weight) then the first time a node is visited is the shortest path to that node from the source node.
-
-The depth first search is well geared towards problems where we want to find any solution to the problem (not necessarily the shortest path), or to visit all of the nodes in the graph. 
-
-
-    def bfs_iter(graph, start, visited=None):
-        """Iterative breadth-first search of graph."""
-        visited = [] if not visited else visited
-
-        q = [start]
-        while q:
-            v = q.pop(0)
-            if not v in visited:
-                visited = visited + [v]
-                q = q + graph[v]
-        return visited
-
-
-## Shortest path with Dijkstra
+### Shortest path with Dijkstra
 
 Dijkstra (Heap method)
 
