@@ -20,7 +20,7 @@ title: Study Index
 - [Trees and Graphs][trees_graphs]
 - [Traversal][traversal]
 - [Suffix Trees and Tries][suffix_trees]
-- [Directed Acyclic Graphs (DAG)][dags]
+- [Directed Acyclic Graphs (DAG) and Topological Sorting][dags]
 
 
 ### Problems
@@ -28,7 +28,6 @@ title: Study Index
 - [Notes][problems_notes]
 - [The Knight’s Tour Problem - dfs][knights]
 - [Strongly Connected Components][strongly_connected]
-- [Pancake Problem - Topological Sorting][topological]
 - [Graphics Mask - A Simple Dynamic Problem][graphics_mask]
 - [KiloManX, Ammo Problem][kilo_man_x]
 - [BFS, The Word Ladder Problem - Tries][word_ladder]
@@ -59,7 +58,6 @@ title: Study Index
 [problems_notes]: problems/problems_notes.html
 [knights]: problems/knights.html
 [strongly_connected]: problems/strongly_connected.html
-[topological]: problems/topological_pancakes.html
 [graphics_mask]: problems/graphics_mask.html
 [kilo_man_x]: problems/kilo_man_x.html
 [word_ladder]: problems/word_ladder.html

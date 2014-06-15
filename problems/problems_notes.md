@@ -21,10 +21,6 @@ Make collection of nodes that are different by one letter. Turn that into adjace
 Or to get the total faster, could use Dijkstra's Algo. (mention) 
 
 
-
-- coin change. dynamic. optimization.
-- matching brackets, odd num of occurences(ez...use a deque)
-
 Problems still to think:
 - dags
 
@@ -56,6 +52,8 @@ Problems tricky, double check:
     - joined_string
     - tagalog
     - word_ladder
+- DAGs
+    - 
 
 
 Some good questions here:
