@@ -9,40 +9,6 @@ While traversing methods, how the keys are printed sometimes make a difference:
 - *preorder* prints keys before, and *postorder* prints keys after subtrees.
 
 
-## Breadth-first and Depth-first Traversal
-
-Depth-first wander paths...finds any solution to the problem (not necessarily the shortest path), or to visit all of the nodes in the graph. 
-
-Breadth-first is better for shortest paths.
-
-    """
-    BFS and DFS are IDENTICAL but for one line...
-    putting unvisited nodes to TOP or BOTTOM of list.
-    """
-
-    def dfs(graph, start, visited=None):
-        visited = [] if not visited else visited
-        q = [start]
-        while q:
-            v = q.pop(0)
-            if v not in visited:
-                visited = visited + [v]
-                q = graph[v] + q          ## Unvisited to TOP of list!
-        return visited
-
-    def bfs(graph, start, visited=None):
-        visited = [] if not visited else visited
-        q = [start]
-        while q:
-            v = q.pop(0)
-            if v not in visited:
-                visited = visited + [v]
-                q = q + graph[v]         ## Unvisited to BOTTOM of list!
-        return visited
-
-
-## Shortest path with Dijkstra
-
 Dijkstra (Heap method)
 
 Dijkstra using a Heap is one of the most powerful techniques to add to your TopCoder arsenal. It essentially allows you to write a Breadth First search, and instead of using a Queue you use a Priority Queue/Heap with  has a sorting func on nodes such that lowest cost nodes are on top.
