@@ -20,7 +20,6 @@ title: Study Index
 - [Suffix Trees and Tries](/data_structs/suffix_trees.html)
 - [Directed Acyclic Graphs (DAG) and Topological Sorting](/data_structs/dags.html)
 
-
 ### Things to code from memory
 
 - bfs and dfs traversals [gist:traversals](https://gist.github.com/hillscottc/5872513c69398e003fd4)
