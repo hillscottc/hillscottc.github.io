@@ -22,13 +22,11 @@ title: Study Index
 
 ### Things to code from memory
 
-- bfs and dfs traversals [gist:traversals](https://gist.github.com/hillscottc/5872513c69398e003fd4)
-- [traversals](/pycode/traversals.py)
-
-- topological sort [gist:topological](https://gist.github.com/hillscottc/ee407aea701ef342fce0)
-- nested dicts for tries [gist:trie](https://gist.github.com/hillscottc/d60e7fbe714a6a4b8f9b)
-- longest common substring [gist:longest-common-substring](https://gist.github.com/hillscottc/947a1f5ddd01bdc85c72#file-long_substr-py)
-- Floyd-Warshall algorithm[gist:floyd-warshall](https://gist.github.com/hillscottc/61002306aa5b026ed73c)
+- [bfs and dfs traversals](/pycode/traversals.html)
+- [topological sort](/pycode/topological.html)
+- [nested dicts for tries](/pycode/trie.html)
+- [longest common substring](/pycode/lcs.html)
+- [Floyd-Warshall algorithm](/pycode/floyd.html)
 
 ### Problems
 
