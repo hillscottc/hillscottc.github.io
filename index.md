@@ -23,7 +23,7 @@ title: Study Index
 ### Things to code from memory
 
 - [bfs and dfs traversals](/pycode/traversals.html)
-- [topological sort](/pycode/topological.html)
+- [topological sort of a DAG](/pycode/topological.html)
 - [nested dicts for tries](/pycode/trie.html)
 - [longest common substring](/pycode/lcs.html)
 - [Floyd-Warshall algorithm](/pycode/floyd.html)
