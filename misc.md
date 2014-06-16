@@ -4,21 +4,13 @@ title: Misc
 ---
 
 
-- Floyd-Warshall, All-Pairs Shortest Path..As you can see, this is extremely simple to remember and type. If the graph is small (less than 100 nodes) then this technique can be used to great effect for a quick submission. 
 
-
-## THESE ARE IMP!!!
-
-http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=dynProg
--- !!!!
-
-
-http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=stringSearching
+- do team builder, use floyd-warshall?
+- String Algos? http://community.topcoder.com/tc?module=Static&d1=tutorials&d2=stringSearching
 
 
 ### Can code from scratch     
-- 
-
+-
 
 
 
