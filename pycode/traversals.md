@@ -10,7 +10,7 @@ title: traversals.py
     to store unvisited nodes.
     """
 
-    def dfs(graph, start, visited=None):
+    def dft(graph, start, visited=None):
         visited = [] if not visited else visited
         q = [start]
         while q:
@@ -20,7 +20,7 @@ title: traversals.py
                 q = graph[v] + q          # unvisited to TOP (stack)
         return visited
 
-    def bfs(graph, start, visited=None):
+    def bft(graph, start, visited=None):
         visited = [] if not visited else visited
         q = [start]
         while q:
@@ -41,7 +41,6 @@ title: traversals.py
         graph = {'A': ['B', 'C'], 'B': ['D', 'E'],
                  'C': ['D', 'E'], 'D': ['E'], 'E': ['A']}
 
-        print dfs(graph, 'A')
-        print bfs(graph, 'A')
+        print dft(graph, 'A')
+        print bft(graph, 'A')
 
-    

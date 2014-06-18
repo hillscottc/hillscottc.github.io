@@ -22,12 +22,12 @@ Method signature: `int leastShots(String[] damageChart, int[] bossHealth)`
 
 ### Constraints
 
--   damageChart will contain between 1 and 15 elements, inclusive.
--   each element of damageChart will be of the same length, which will be the same as the number of elements in damageChart.
--   each element of damageChart will contain only the characters '0'-'9'.
--   bossHealth will contain between 1 and 15 elements, inclusive.
--   damageChart and bossHealth will contain the same number of elements.
--   each element in bossHealth will be between 1 and 1000000, inclusive.
+- damageChart will contain between 1 and 15 elements, inclusive.
+- each element of damageChart will be of the same length, which will be the same as the number of elements in damageChart.
+- each element of damageChart will contain only the characters '0'-'9'.
+- bossHealth will contain between 1 and 15 elements, inclusive.
+- damageChart and bossHealth will contain the same number of elements.
+- each element in bossHealth will be between 1 and 1000000, inclusive.
  
 ### Examples
 

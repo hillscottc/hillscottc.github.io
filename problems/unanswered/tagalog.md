@@ -15,15 +15,8 @@ a b k d e g h i l m n ng o p r s t u w y
 Note that not all letters used in English are present, 'k' is the third letter, and 'ng' is a single letter that comes between 'n' and 'o'.
 You are compiling a Tagalog dictionary, and for people to be able to find words in it, the words need to be sorted in alphabetical order with reference to the Tagalog alphabet. Given a list of Tagalog words as a String[], return the same list in Tagalog alphabetical order.
 
-Definition
-        
-Class:     TagalogDictionary
-Method:     sortWords
-Parameters:     String[]
-Returns:     String[]
+
 Method signature:     String[] sortWords(String[] words)
-(be sure your method is public)
-   
 
 Notes
 -     Any 'n' followed followed by a 'g' should be considered a single 'ng' letter (the one that comes between 'n' and 'o').

@@ -3,7 +3,6 @@ layout: default
 title: JoinedString
 ---
 
-
 TopCoder problem "JoinedString" used in SRM 302 (Division I Level Three)
 
 Problem Statement

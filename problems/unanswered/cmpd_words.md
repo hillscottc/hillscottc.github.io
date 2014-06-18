@@ -3,8 +3,6 @@ layout: default
 title: Compound Words
 ---
 
-## Compound Words
-
 TopCoder problem "CmpdWords" used in SRM 268 (Division I Level One , Division II Level Two)
 
 ### Problem Statement
