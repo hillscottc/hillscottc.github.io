@@ -1,20 +1,12 @@
+"""
+My implementation and utils for the Floyd Warshall Algorithm.
+
+(Floyd finds cost of shortest path between every
+pair of vertices in a weighted graph.)
+"""
 
 
 def adj(g):
-    """
-    Convert a directed graph to an adjacency matrix.
-    >>> g = {1: {2: 3, 3: 8, 5: -4},
-    ...      2: {4: 1, 5: 7},
-    ...      3: {2: 4},
-    ...      4: {1: 2, 3: -5},
-    ...      5: {4: 6}}
-    >>> adj(g) # doctest: +NORMALIZE_WHITESPACE
-    {1: {1: 0, 2: 3, 3: 8, 4: inf, 5: -4},
-     2: {1: inf, 2: 0, 3: inf, 4: 1, 5: 7},
-     3: {1: inf, 2: 4, 3: 0, 4: inf, 5: inf},
-     4: {1: 2, 2: inf, 3: -5, 4: 0, 5: inf},
-     5: {1: inf, 2: inf, 3: inf, 4: 6, 5: 0}}
-    """
     vertices = g.keys()
     return {v1: {v2: 0 if v1 == v2 else g[v1].get(v2, float('inf'))
                  for v2 in vertices}
