@@ -5,7 +5,7 @@ title: The Teambuilder Problem
 
 [Source](http://community.topcoder.com/stat?c=problem_statement&pm=2356&rd=4740)
 
-See my Floyd-Warshall notes. 
+[My Solution](teambuilder_solved.html)
 
 ## Problem Statement
 
