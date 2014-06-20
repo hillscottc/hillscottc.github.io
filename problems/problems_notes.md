@@ -3,11 +3,13 @@ layout: default
 title: Problems Notes
 ---
 
-- [The Knight’s Tour Problem - dfs][knights]
-- [Strongly Connected Components][strongly_connected]
-- [Graphics Mask - A Simple Dynamic Problem][graphics_mask]
-- [KiloManX, Ammo Problem][kilo_man_x]
-- [BFS, The Word Ladder Problem - Tries][word_ladder]
+- [The Knight’s Tour Problem - dfs](knights.html)
+- [Strongly Connected Components](strongly_connected.html)
+- [Graphics Mask](graphics_mask.html)
+- [KiloManX](kilo_man_x.html)
+- [BFS, Word Ladder - Tries](word_ladder.html)
+- [Teambuilder...(uses Floyd)](teambuilder.html)
+- [longest common substring](longest_common_substrings.html)
 
 
 ### Summaries
@@ -16,20 +18,13 @@ title: Problems Notes
 
 - Coins: dynamic, optimization
 
-- 
-Problems still to think:
-- dags
+### To do
 
-Problems tricky, double check:
 - convex hull
 - skyline
 - sorts
 - maze
 - knapsack
-
-
-
-
 
 ## By Topic:
 
@@ -141,10 +136,6 @@ Naturally represented by graphs, where each graph vertex denotes a junction of t
     find such a schedule if one exists.
 
 
-[knights]: knights.html
-[strongly_connected]: strongly_connected.html
-[graphics_mask]: graphics_mask.html
-[kilo_man_x]: kilo_man_x.html
-[word_ladder]: word_ladder.html
+
 
 
