@@ -1,9 +1,9 @@
 ---
 layout: default
-title: teambuilder_solved.md
+title: Solution to Teambuilder Problem
 ---
 
-Solution to [Teambuilder Problem](teambuilder.html)
+[Teambuilder Problem](teambuilder.html)
 
     """
     Use Floyd Warshall to solve Teambuilder
