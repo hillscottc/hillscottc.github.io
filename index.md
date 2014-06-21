@@ -1,24 +1,36 @@
 ---
-layout: default
-title: Study Index
+layout: page
+title: Study
+tagline: Data structures and algorithms.
 ---
+{% include JB/setup %}
 
-- [Misc](misc.html)
-
+    
 
 ### Programming
 
-- [Notes](/programming/programming_notes.html)
-- [Big Oh](/programming/big_oh.html)
-- [Recursion](/programming/recursion.html)
-- [Sorting](/programming/sorting.html)
+<ul>
+  {% assign pages_list = site.pages %}
+  {% assign group = 'programming' %}
+  {% include JB/pages_list %}
+</ul>
 
 ### Data Structures
 
-- [Trees and Graphs](/data_structs/trees_and_graphs.html)
-- [Traversal](/data_structs/traversal.html)
-- [Suffix Trees and Tries](/data_structs/suffix_trees.html)
-- [Directed Acyclic Graphs (DAG) and Topological Sorting](/data_structs/dags.html)
+<ul>
+  {% assign pages_list = site.pages %}
+  {% assign group = 'data_structs' %}
+  {% include JB/pages_list %}
+</ul>
+
+### Problems
+
+<ul>
+  {% assign pages_list = site.pages %}
+  {% assign group = 'problems' %}
+  {% include JB/pages_list %}
+</ul>
+
 
 ### Things to code from memory
 
@@ -28,9 +40,18 @@ title: Study Index
 - [longest common substring](/pycode/lcs.html)
 - [Floyd-Warshall algorithm](/pycode/floyd.html)
 
-### Problems
 
-- [Notes](problems/problems_notes.html)
+[Misc](misc.html)
+
+## Posts
+
+<ul class="posts">
+  {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+
+
 
 #### Sources
 
