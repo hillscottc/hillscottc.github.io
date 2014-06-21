@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: Graphics Mask
 group: problems
 ---

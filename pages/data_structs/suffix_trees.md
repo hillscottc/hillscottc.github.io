@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: Suffix Trees and Tries
 group: data_structs
 ---

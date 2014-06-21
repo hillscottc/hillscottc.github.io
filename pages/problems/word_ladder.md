@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: The Word Ladder Problem
 group: problems
 ---

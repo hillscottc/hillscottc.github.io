@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: Trees and Graphs
 group: data_structs
 ---

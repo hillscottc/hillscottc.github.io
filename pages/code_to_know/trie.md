@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: trie.py
 group: code
 ---

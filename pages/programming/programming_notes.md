@@ -1,5 +1,6 @@
 ---
 layout: page
+makdown: redcarpet
 title: Programming Notes
 group: programming
 ---

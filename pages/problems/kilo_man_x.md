@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: The KiloManX Problem
 group: problems
 ---

@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: Directed Acyclic Graphs (DAGs) and Topological Sorting
 group: data_structs
 ---

@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: The Knights Tour Problem
 group: problems
 ---

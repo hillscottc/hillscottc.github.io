@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: Study
 tagline: Data structures and algorithms.
 ---

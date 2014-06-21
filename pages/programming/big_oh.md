@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: Big Oh
 tagline: and Order of Complexity
 group: programming

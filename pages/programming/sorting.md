@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: Sorting
 group: programming
 ---

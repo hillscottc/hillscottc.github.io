@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: Coins and other Dynamic Probs
 group: problems
 ---

@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: Graph Traversal ... BFS, DFS, Djikstra
 group: data_structs
 ---

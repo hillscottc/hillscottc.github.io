@@ -1,5 +1,6 @@
 ---
 layout: page
+markdown: redcarpet
 title: traversals.py
 group: code
 ---
