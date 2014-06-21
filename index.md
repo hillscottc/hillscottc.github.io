@@ -41,6 +41,10 @@ tagline: Data structures and algorithms.
   {% include JB/pages_list %}
 </ul>
 
+### Python Code
+  
+  - [index](/pycode/)
+
 
 [Misc](misc.html)
 
