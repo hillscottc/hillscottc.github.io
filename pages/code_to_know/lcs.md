@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: lcs.py
+group: code
 ---
+{% include JB/setup %}
 [gist:longest-common-substring](https://gist.github.com/hillscottc/947a1f5ddd01bdc85c72#file-long_substr-py)
 
 

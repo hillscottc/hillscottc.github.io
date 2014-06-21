@@ -32,13 +32,13 @@ tagline: Data structures and algorithms.
 </ul>
 
 
-### Things to code from memory
+### Code to know
 
-- [bfs and dfs traversals](/pycode/traversals.html)
-- [topological sort of a DAG](/pycode/topological.html)
-- [nested dicts for tries](/pycode/trie.html)
-- [longest common substring](/pycode/lcs.html)
-- [Floyd-Warshall algorithm](/pycode/floyd.html)
+<ul>
+  {% assign pages_list = site.pages %}
+  {% assign group = 'code' %}
+  {% include JB/pages_list %}
+</ul>
 
 
 [Misc](misc.html)

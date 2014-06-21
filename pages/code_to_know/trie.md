@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: trie.py
+group: code
 ---
+{% include JB/setup %}
 [gist:trie](https://gist.github.com/hillscottc/d60e7fbe714a6a4b8f9b)
 
 

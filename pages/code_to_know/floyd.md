@@ -1,7 +1,10 @@
 ---
-layout: default
+layout: page
 title: floyd.py
+group: code
 ---
+{% include JB/setup %}
+
 [gist:floyd-warshall](https://gist.github.com/hillscottc/61002306aa5b026ed73c)
 
 

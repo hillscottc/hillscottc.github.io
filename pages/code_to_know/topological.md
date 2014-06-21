@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: topological.py
+group: code
 ---
+{% include JB/setup %}
 [gist:topological](https://gist.github.com/hillscottc/ee407aea701ef342fce0)
 
 

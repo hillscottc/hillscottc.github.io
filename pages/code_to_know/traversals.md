@@ -1,7 +1,9 @@
 ---
-layout: default
+layout: page
 title: traversals.py
+group: code
 ---
+{% include JB/setup %}
 [gist:traversals](https://gist.github.com/hillscottc/5872513c69398e003fd4)
 
     """
