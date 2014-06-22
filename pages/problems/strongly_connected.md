@@ -8,12 +8,12 @@ group: problems
 
 For the remainder of this chapter we will turn our attention to some extremely large graphs. The graphs we will use to study some additional algorithms are the graphs produced by the connections between hosts on the Internet and the links between web pages. We will begin with web pages.
 
-Search engines like Google and Bing exploit the fact that the pages on the web form a very large directed graph. To transform the World Wide Web into a graph, we will treat a page as a vertex, and the hyperlinks on the page as edges connecting one vertex to another. Figure 30 shows a very small part of the graph produced by following the links from one page to the next, beginning at Luther College’s Computer Science home page. Of course, this graph could be huge, so we have limited it to web sites that are no more than 10 links away from the CS home page.
+Search engines like Google and Bing exploit the fact that the pages on the web form a very large directed graph. To transform the World Wide Web into a graph, we will treat a page as a vertex, and the hyperlinks on the page as edges connecting one vertex to another. Figure 30 shows a very small part of the graph produced by following the links from one page to the next.
 
 
 If you study the graph in Figure 30 you might make some interesting observations. First you might notice that many of the other web sites on the graph are other Luther College web sites. Second, you might notice that there are several links to other colleges in Iowa. Third, you might notice that there are several links to other liberal arts colleges. You might conclude from this that there is some underlying structure to the web that clusters together web sites that are similar on some level.
 
-One graph algorithm that can help find clusters of highly interconnected vertices in a graph is called the strongly connected components algorithm (SCC). We formally define a strongly connected component, C, of a graph G, as the largest subset of vertices C⊂V such that for every pair of vertices v,w∈C we have a path from v to w and a path from w to v. Figure 27 shows a simple graph with three strongly connected components. The strongly connected components are identified by the different shaded areas.
+One graph algorithm that can help find clusters of highly interconnected vertices in a graph is called the **strongly connected components algorithm (SCC)**. We formally define a strongly connected component, C, of a graph G, as the largest subset of vertices C⊂V such that for every pair of vertices v,w∈C we have a path from v to w and a path from w to v. Figure 27 shows a simple graph with three strongly connected components. The strongly connected components are identified by the different shaded areas.
 
 ![Figure 31: A Directed Graph with Three Strongly Connected Components](/img/PSADS_31.png)
 
