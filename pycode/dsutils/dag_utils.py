@@ -1,5 +1,7 @@
 """Utils for Directed Acyclic Graphs."""
 
+
+# Directed Acyclic Graph (DAG)
 # A -> B -> D -> E
 #           |
 #           C
@@ -14,7 +16,7 @@ WG = {
 }
 
 # Directed Adjacency Graph (DAG)
-# (Matrix of WG, with dist-self:0, dist-unreachable:INF)
+# (Matrix of WG, with weight-self:0, weight-unreachable:INF)
 INF = float('inf')
 DAG = {
     'A': {'A': 0, 'B': 1, 'C': INF, 'D': 2, 'E': 3},

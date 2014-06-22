@@ -33,5 +33,5 @@ def bft(graph, start, visited=None):
 
 if __name__ == "__main__":
     import sample_data as samp
-    print dft(samp.ADJL, 'A')
-    print bft(samp.ADJL, 'A')
+    print dft(samp.ADJL_1, 'A')
+    print bft(samp.ADJL_2, 'A')
