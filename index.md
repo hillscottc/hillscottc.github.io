@@ -6,7 +6,9 @@ tagline: Data structures and algorithms.
 ---
 {% include JB/setup %}
 
-    
+
+[Misc](pages/misc.html)
+
 
 ### Programming
 
@@ -33,29 +35,15 @@ tagline: Data structures and algorithms.
 </ul>
 
 
-### Code to know
+### Code
 
+- [/code/](/code/)
+- Code to know
 <ul>
   {% assign pages_list = site.pages %}
   {% assign group = 'code' %}
   {% include JB/pages_list %}
 </ul>
-
-### Python Code
-  
-  - [index](/code/)
-
-
-[Misc](misc.html)
-
-## Posts
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
 
 
 #### Sources
