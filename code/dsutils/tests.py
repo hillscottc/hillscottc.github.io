@@ -1,5 +1,6 @@
 import unittest
-import sample_data as sd
+
+from code.dsutils import sample_data as sd
 from traversals import bft, dft
 
 

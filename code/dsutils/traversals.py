@@ -7,6 +7,7 @@ BFT and DFT are identical, _except_
 
 From http://code.activestate.com/recipes/576723-dfs-and-bfs-graph-traversal/
 """
+from code.dsutils import sample_data as samp
 
 
 def dft(graph, start, visited=None):
@@ -32,6 +33,5 @@ def bft(graph, start, visited=None):
 
 
 if __name__ == "__main__":
-    import sample_data as samp
     print dft(samp.ADJL_1, 'A')
     print bft(samp.ADJL_2, 'A')
