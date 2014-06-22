@@ -41,10 +41,6 @@ structure node
    [data]
 end
 
-cost(X, Y) := if (X.neighbors contains Y) return X.neighbors[Y];
-         else "Not possible"
-```
-
 ### Recognizing a graph problem:
 
 Some common keywords associated with graph problems are: vertices, nodes, edges, connections, connectivity, paths, cycles and direction.
@@ -64,63 +60,3 @@ An example of a neighborhood of width 7 and height 5:
     .....X."
 
 Once you have recognized that the problem is a graph problem it is time to start building up your representation of the graph in memory.
-
-
-### Convert a directed graph to an adjacency matrix
-
-Convert a directed graph to an adjacency matrix.
-
-Note: The distance from a node to itself is 0 and distance from a node to
-an unconnected node is defined to be infinite.
-
-
-    def adj(g):
-        """
-        >>> g = {1: {2: 3, 3: 8, 5: -4},
-        ...      2: {4: 1, 5: 7},
-        ...      3: {2: 4},
-        ...      4: {1: 2, 3: -5},
-        ...      5: {4: 6}}
-        >>> adj(g) # doctest: +NORMALIZE_WHITESPACE
-        {1: {1: 0, 2: 3, 3: 8, 4: inf, 5: -4},
-         2: {1: inf, 2: 0, 3: inf, 4: 1, 5: 7},
-         3: {1: inf, 2: 4, 3: 0, 4: inf, 5: inf},
-         4: {1: 2, 2: inf, 3: -5, 4: 0, 5: inf},
-         5: {1: inf, 2: inf, 3: inf, 4: 6, 5: 0}}
-        """
-        vertices = g.keys()
-        return {v1: {v2: 0 if v1 == v2 else g[v1].get(v2, float('inf'))
-                     for v2 in vertices}
-                for v1 in vertices}
-
-
-### Singly linked lists
-
-An example of one of the simplest types of graphs is a singly linked list! Now we can start to see the power of the graph data structure, as it can represent very complicated relationships, but also something as simple as a list.
-A singly linked list has one "head" node, and each node has a link to the next node. So the structure looks like this:
-
-    structure node
-       [node] link;
-       [data]
-    end
-
-node head;
-
-A simple example would be:
-
-    node B, C;
-    head.next = B;
-    B.next = C;
-    C.next = null;
-
-This would be represented graphically as `head -> B -> C -> null`.
-
-The *cost function* would look as follows:
-
-    cost(X, Y) := if (X.link = Y) return 1;
-               else if (X = Y) return 0;
-               else "Not possible"
-
-This cost function represents the fact that we can only move directly to the link node from our current node. 
-Get used to seeing cost functions because anytime that you encounter a graph problem you will be dealing with them in some form or another.
-
