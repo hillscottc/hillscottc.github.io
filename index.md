@@ -43,7 +43,7 @@ tagline: Data structures and algorithms.
 
 ### Python Code
   
-  - [index](/pycode/)
+  - [index](/code/)
 
 
 [Misc](misc.html)
