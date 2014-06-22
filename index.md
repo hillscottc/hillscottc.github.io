@@ -39,11 +39,12 @@ tagline: Data structures and algorithms.
 
 - [/code/](/code/)
 - Code to know
-<ul>
-  {% assign pages_list = site.pages %}
-  {% assign group = 'code' %}
-  {% include JB/pages_list %}
-</ul>
+
+  <ul>
+    {% assign pages_list = site.pages %}
+    {% assign group = 'code' %}
+    {% include JB/pages_list %}
+  </ul>
 
 
 #### Sources
