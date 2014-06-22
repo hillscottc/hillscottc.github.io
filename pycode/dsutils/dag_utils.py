@@ -1,39 +1,5 @@
 """Utils for Directed Acyclic Graphs."""
 
-
-
-# Adjacency List = dict of nodes to list of adjacent nodes (weight=1)
-ADJL = {
-    'A': ['B'],
-    'B': ['D'],
-    'C': ['D'],
-    'D': ['E'],
-    'E': []
-}
-
-
-
-    graph = {'A': ['B', 'C'], 'B': ['A', 'D', 'E'],
-             'C': ['A', 'D', 'E'], 'D': ['B', 'C', 'E'],
-             'E': ['A']}
-    '''
-             A
-           /   \
-          B--D--C
-           \ | /
-             E
-    '''
-    graph = {'A': ['B', 'C'], 'B': ['A', 'D', 'E'],
-             'C': ['A', 'D', 'E'], 'D': ['B', 'C', 'E'],
-             'E': ['A']}
-
-
-
-
-
-
-
-# Directed Acyclic Graph (DAG)
 # A -> B -> D -> E
 #           |
 #           C
@@ -48,7 +14,7 @@ WG = {
 }
 
 # Directed Adjacency Graph (DAG)
-# (Matrix of WG, with weight-self:0, weight-unreachable:INF)
+# (Matrix of WG, with dist-self:0, dist-unreachable:INF)
 INF = float('inf')
 DAG = {
     'A': {'A': 0, 'B': 1, 'C': INF, 'D': 2, 'E': 3},
