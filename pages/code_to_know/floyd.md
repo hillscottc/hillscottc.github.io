@@ -12,6 +12,8 @@ group: code
 
 [gist:floyd-warshall](https://gist.github.com/hillscottc/61002306aa5b026ed73c)
 
+{% gist hillscottc/61002306aa5b026ed73c %}
+
 
     def floyd(g):
         """The Floyd-Warshall Algorithm...shortest paths for all vertices.
@@ -24,3 +26,5 @@ group: code
                       for v3 in vertices}
                  for v1 in vertices}
         return d
+
+        

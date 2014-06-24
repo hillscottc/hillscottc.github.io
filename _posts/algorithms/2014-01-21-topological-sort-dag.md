@@ -1,11 +1,11 @@
 ---
-layout: page
+layout: post
 markdown: redcarpet
-title: Directed Acyclic Graphs (DAGs) and Topological Sorting
-group: data_structs
+category : algorithms
+tagline: Topological Sorting of DAGs 
+tags : [graphs, dag]
 ---
 {% include JB/setup %}
-
 
 A directed graph with no cycles is called a directed acyclic graph or a DAG. 
 
@@ -26,10 +26,7 @@ The importance of topological sorting is that it gives us an ordering to process
 
 ![An acylic directed graph, fig 1](/img/topological_1.png)
 
-(gist embedded)
-
-`<script src="https://gist.github.com/hillscottc/ee407aea701ef342fce0.js"></script>`
-
+{% gist hillscottc/ee407aea701ef342fce0 %}
 
 ### The pancake example, from [interactivepython](http://interactivepython.org/courselib/static/pythonds/Graphs/graphdfs.html#topological-sorting)
 
@@ -46,10 +43,4 @@ Figure 28 shows the depth first forest constructed by dfs on the pancake-making 
 Finally, Figure 29 shows the results of applying the topological sort algorithm to our graph. Now all the ambiguity has been removed and we know exactly the order in which to perform the pancake making steps.
 
 ![Figure 29: Result of Topological Sort on Directed Acyclic Graph](/img/PSADS_29.png)
-
-
-
-
-
-
 

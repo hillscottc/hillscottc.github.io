@@ -10,6 +10,12 @@ tagline: Data structures and algorithms.
 [Misc](pages/misc.html)
 
 
+### Posts
+
+{% for post in site.posts %}
+  - [{{ post.title }}]({{ BASE_PATH }}{{ post.url }})
+{% endfor %}
+
 ### Programming
 
 <ul>
