@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: post
 markdown: redcarpet
-title: Suffix Trees and Tries
-group: data_structs
+category: 
+tagline: and Tries
+tags: [data-struct, graph, trie]
 ---
 {% include JB/setup %}
 
@@ -79,7 +80,8 @@ A basic Suffix Tree imp.
 ![suffix tree img][suffix_tree]
 
 A Simple Suffix Tree Implementation:
-`<script src="https://gist.github.com/hillscottc/f0460657daca55f95b62.js"></script>`
+
+{% gist hillscottc/f0460657daca55f95b62 %}
 
 Or, here's a [more complete version][suffix_tree_big].
 

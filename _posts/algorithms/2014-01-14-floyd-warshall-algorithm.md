@@ -1,9 +1,9 @@
 ---
 layout: post
 markdown: redcarpet
-category : algorithms
-tagline: "Floyd Warshall All-Pairs Shortest Path algorithm"
-tags : [floyd, graphs]
+category: algorithms
+tagline: for All-Pairs Shortest Path
+tags: [floyd, graph, shortest-path]
 ---
 {% include JB/setup %}
 

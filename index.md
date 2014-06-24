@@ -6,51 +6,27 @@ tagline: Data structures and algorithms.
 ---
 {% include JB/setup %}
 
-
 [Misc](pages/misc.html)
-
 
 ### Posts
 
+Posts [by Tag](tags.html)
+
+Posts [by Category](categories.html)
+
+All Posts:  
 {% for post in site.posts %}
-  - [{{ post.title }}]({{ BASE_PATH }}{{ post.url }})
+- [{{ post.title }}]({{ BASE_PATH }}{{ post.url }})
 {% endfor %}
 
-### Programming
+
+### Code to know
 
 <ul>
-  {% assign pages_list = site.pages %}
-  {% assign group = 'programming' %}
-  {% include JB/pages_list %}
+{% assign pages_list = site.pages %}
+{% assign group = 'code' %}
+{% include JB/pages_list %}
 </ul>
-
-### Data Structures
-
-<ul>
-  {% assign pages_list = site.pages %}
-  {% assign group = 'data_structs' %}
-  {% include JB/pages_list %}
-</ul>
-
-### Problems
-
-<ul>
-  {% assign pages_list = site.pages %}
-  {% assign group = 'problems' %}
-  {% include JB/pages_list %}
-</ul>
-
-
-### Code
-
-- [/code/](/code/)
-- Code to know
-
-  <ul>
-    {% assign pages_list = site.pages %}
-    {% assign group = 'code' %}
-    {% include JB/pages_list %}
-  </ul>
 
 
 #### Sources

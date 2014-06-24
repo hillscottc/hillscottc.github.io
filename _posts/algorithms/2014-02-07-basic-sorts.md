@@ -1,11 +1,12 @@
 ---
-layout: page
+layout: post
 markdown: redcarpet
-title: Sorting
-group: programming
+category: algorithms
+tagline: 
+tags: [sort]
 ---
 
-## Bubble Sort
+### Bubble Sort
 
 Because of its abysmal O(n2) performance, it is not used often for large (or even medium-sized) datasets.
 
@@ -31,7 +32,7 @@ The bubble sort works by passing sequentially over a list, comparing each value,
           A[y] = tmp
 
 
-## Insertion Sort
+### Insertion Sort
 
 Moves data around too much. Each time an insertion is made, all elements in a greater position are shifted.
 
@@ -48,7 +49,7 @@ Time Complexity of Solution: Best O(n); Average O(n^2); Worst O(n^2).
 
 
 
-## Selection Sort
+### Selection Sort
 
 A step up from insertion sort in terms of memory - only swaps elements that need it. 
 In terms of time complexity, however, insertion sort is better.

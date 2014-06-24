@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: post
 markdown: redcarpet
-title: Strongly Connected Components
-group: problems
+category: problems
+tagline:
+tags: []
 ---
 {% include JB/setup %}
 

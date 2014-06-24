@@ -1,38 +1,34 @@
 ---
-layout: page
+layout: post
 markdown: redcarpet
-title: Recursion
-group: programming
+category: algorithms
+tagline: 
+tags: [recursion]
 ---
+{% include JB/setup %}
 
-Like the robots of Asimov, all recursive algorithms must obey three important laws:  
+A recursive algorithm has these fundamental properties:  
 
-    1. Must have a base case. Typically a problem that is small enough to solve directly.  
-    2. Must change its state and move toward the base case. Usually, data getting smaller.  
-    3. A recursive algorithm must call itself, recursively.  
+  1. Must have a **base case**. Typically a problem that is small enough to solve directly.  
+  2. Must change state moving towards the base case. Usually, data getting smaller.  
+  3. An 'escape clause' check(s), returning the base case(s).
 
-### Sum of a List of Numbers
+For example, consider the sum of a list of numbers.
 
-We will begin our investigation with a simple problem that you already know how to solve without using recursion. Suppose that you want to calculate the sum of a list of numbers such as: `[1, 3, 5, 7, 9]`. An iterative function that computes the sum is shown. The function uses an accumulator variable (theSum) to compute a running total.
+Given: `[1, 3, 5, 7, 9]` 
 
-We could rewrite the list as a fully parenthesized expression, like this:
+As a parenthesized expression, would be:
 
 `((((1+3)+5)+7)+9) , or  (1+(3+(5+(7+9))))`
 
-See the innermost set of paren, `(7+9)` can be solved without a loop or any special constructs. 
+Notice the innermost set of paren, `(7+9)` can be solved without a loop or any special constructs. That's the **BASE CASE**.
 
-To state it in a functional form:
+In a functional form, it's:
     
 `sum_nums(nums) = first(nums) + sum_nums(rest(nums))`
 
-There are two key ideas in this listing to look at.
-- First, on line 2 is escape clause check. The sum of a list of length 1 is trivial.
-- Then, it's a series of simplifications. Each recursive call solves a smaller problem, til it can't get any smaller.
 
-
-
-
-### Factorial 
+#### Factorial 
 
 4! = 4 * 3 * 2 * 1
 
@@ -52,7 +48,7 @@ Iterative:
             result *= i
         return result
 
-### Fibonacci
+#### Fibonacci
 
 0,1,1,2,3,5,8,13,21,34,55,89, ...
 
@@ -81,7 +77,7 @@ Iterative solution:
 
 The iterative version fibi() is a lot faster than the recursive version fib().
 
-### Compute an Exponent
+#### Compute an Exponent
 
     def exp(x, n):
         if n == 0:
@@ -89,7 +85,7 @@ The iterative version fibi() is a lot faster than the recursive version fib().
         else:
             return x * exp(x, n-1)
 
-### Flatten a nested list
+#### Flatten a nested list
 
     def flatten_list(a, result=None):
         if result is None:

@@ -1,11 +1,14 @@
 ---
 layout: post
 markdown: redcarpet
-category : algorithms
-tagline: Topological Sorting of DAGs 
-tags : [graphs, dag]
+category: algorithms
+tagline: of Directed Acyclic Graphs
+tags: [graph, dag, sort, data-struct]
 ---
 {% include JB/setup %}
+
+
+## Directed Acyclic Graphs (DAGs)
 
 A directed graph with no cycles is called a directed acyclic graph or a DAG. 
 
@@ -16,7 +19,7 @@ A workable dependency graph is a directed acyclic graph (DAG).
 In parallel processes, tasks that do not depend on each other can be done at the same time. The chain of dependencies that takes the longest time determines the minimum time to completion. This longest time chain of dependencies is a **critical path**. 
 
 
-## Topological Sorting of directed acyclic graphs (DAGs)
+## Topological Sorting
 
 Topological sorting is the most important operation on directed acyclic graphs (DAGs). It orders the vertices on a line such that all directed edges go from left to right. Such an ordering cannot exist if the graph contains a directed cycle, because there is no way you can keep going right on a line and still return back to where you started from! Each DAG has at least one topological sort.
 

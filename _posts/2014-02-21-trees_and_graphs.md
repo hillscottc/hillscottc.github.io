@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: post
 markdown: redcarpet
-title: Trees and Graphs
-group: data_structs
+cataegory:
+tagline:
+tags: [data-struct, tree, graph]
 ---
 {% include JB/setup %}
 
@@ -14,7 +15,9 @@ group: data_structs
 - Many kinds by tweaking the balance, height, or adding props like color, etc.
 
 - Dijkstras Algorithm for shortest path is used for many solutions.
- `<script src="https://gist.github.com/hillscottc/7d2e17c59d96e26ec855.js"></script>`
+
+{% gist hillscottc/7d2e17c59d96e26ec855 %}
+
 
 - Binary Search Trees
     - Each node has a comparable key and no more than two child nodes.

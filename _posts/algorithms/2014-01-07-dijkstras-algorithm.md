@@ -1,9 +1,9 @@
 ---
 layout: post
 markdown: redcarpet
-category : algorithms
-tagline: "Dijkstra's Algorithm for Shortest Paths"
-tags : [traversal, dijkstra, graphs]
+category: algorithms
+tagline: for Shortest Paths
+tags: [traversal, dijkstra, graph, shortest-path]
 ---
 {% include JB/setup %}
 
