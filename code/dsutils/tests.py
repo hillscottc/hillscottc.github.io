@@ -1,6 +1,6 @@
 import unittest
 
-from code.dsutils import sample_data as sd
+import sample_data as sd
 from traversals import bft, dft
 
 
@@ -24,3 +24,5 @@ class TestDsUtils(unittest.TestCase):
         exp_res = ['A', 'B', 'C', 'D', 'E']
         self.assertEqual(res, exp_res)
 
+if __name__ == '__main__':
+    unittest.main()
