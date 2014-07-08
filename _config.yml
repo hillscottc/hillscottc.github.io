@@ -10,8 +10,8 @@ markdown: redcarpet
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Study
-tagline: Data Structures and Algorithms
+title : hillscottc.io
+tagline: Scott Hill's github site
 author :
   name : Scott Hill
   email : scott289@gmail.com

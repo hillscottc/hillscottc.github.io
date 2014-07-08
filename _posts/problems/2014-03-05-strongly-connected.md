@@ -2,8 +2,9 @@
 layout: post
 markdown: redcarpet
 category: problems
+title: Strongly-Connected Nodes
 tagline:
-tags: []
+tags: [graph]
 ---
 {% include JB/setup %}
 

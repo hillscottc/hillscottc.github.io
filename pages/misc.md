@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 markdown: redcarpet
 title: Misc
 ---

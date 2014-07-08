@@ -2,16 +2,15 @@
 layout: post
 markdown: redcarpet
 category: problems
-tagline:
-tags: []
+title: The Teambuilder Problem
+tagline: a shortest paths problem
+tags: [graph]
 ---
 {% include JB/setup %}
-
 
 [Source](http://community.topcoder.com/stat?c=problem_statement&pm=2356&rd=4740)
 
 [My Solution](#solution)
-
 
 ## Problem Statement
 

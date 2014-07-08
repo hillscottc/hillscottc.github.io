@@ -1,6 +1,5 @@
 ---
 layout: page
-markdown: redcarpet
 title: Problems Notes
 group: problems
 ---

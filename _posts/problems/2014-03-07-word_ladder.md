@@ -2,8 +2,9 @@
 layout: post
 markdown: redcarpet
 category: problems
+title: Word Ladder
 tagline:
-tags: []
+tags: [graph, trie]
 ---
 {% include JB/setup %}
 

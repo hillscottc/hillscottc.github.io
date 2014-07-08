@@ -3,7 +3,7 @@
 ## Install RVM, Ruby, Jekyll
 
 # \curl -L https://get.rvm.io | bash -s stable
-source /home/vagrant/.rvm/scripts/rvm
+# source /home/vagrant/.rvm/scripts/rvm
 rvm requirements
 rvm install ruby
 rvm use ruby --default

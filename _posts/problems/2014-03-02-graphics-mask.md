@@ -2,14 +2,16 @@
 layout: post
 markdown: redcarpet
 category: problems
-tagline:
-tags: []
+title: The Graphics Mask Problem
+tagline: filling an area via dynamic programming
+tags: [dynamic]
 ---
 {% include JB/setup %}
 
-TopCoder [problem "grafixMask"](http://topcoder.bgcoder.com/print.php?id=677), Division I Level Two SRM 211 
+Edited from source: Topcoder problem [GrafixMask, Division I Level Two SRM 211](http://topcoder.bgcoder.com/print.php?id=677)
 
-## Problem Statement
+
+### Problem Statement
         
 In one mode of the grafix software package, the user blocks off portions of a masking layer using opaque rectangles. The bitmap used as the masking layer is 400 pixels tall and 600 pixels wide. Once the rectangles have been blocked off, the user can perform painting actions through the remaining areas of the masking layer, known as holes. To be precise, each hole is a maximal collection of contiguous pixels that are not covered by any of the opaque rectangles. Two pixels are contiguous if they share an edge, and contiguity is transitive.
 
@@ -21,7 +23,7 @@ Return an `int[]` containing the area, in pixels, of every hole in the resulting
  
 Method signature:  `int[] sortedAreas(String[] rectangles)`
 
-### Examples
+#### Examples
  
 Examples 0
         
@@ -47,7 +49,7 @@ Example 2
 ![diag3](/img/grafixMask_diagram_3.png)
 
 
-## Solution
+### Solution
 
 *A Simple Dynamic Programing Problem?*
 
