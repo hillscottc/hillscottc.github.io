@@ -45,10 +45,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Configure VirtualBox:
   config.vm.provider "virtualbox" do |vb|
-    # vb.gui = true
+    #vb.gui = true
     vb.customize ["modifyvm", :id, "--memory", "2048"]
     vb.customize ["modifyvm", :id, "--cpus", 2]
-    # vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]    
+    #vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]    
     # vb.customize ["modifyvm", :id, "--vram", 16]
     # vb.customize ["modifyvm", :id, "--draganddrop", "bidirectional"]
   end
