@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Code Index"
+title: Code
 markdown: redcarpet
-description: ""
+description: 
 ---
 {% include JB/setup %}
         
