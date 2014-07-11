@@ -1,7 +1,7 @@
 ---
 layout: page
 markdown: redcarpet
-title: scott hill's github site
+title: home
 tagline: 
 ---
 {% include JB/setup %}
