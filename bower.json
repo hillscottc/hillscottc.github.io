@@ -1,21 +1,21 @@
 {
-  "name": "hillscottc.github.io",
-  "homepage": "https://github.com/hillscottc/hillscottc.github.io",
-  "authors": [
-    "Scott Hill <scott289@gmail.com>"
-  ],
-  "description": "",
-  "main": "",
-  "moduleType": [],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+  "name": "hillscottc-github-io",
+  "private": true,
   "dependencies": {
-    "bootstrap": "~3.3.6"
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.1"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "~3.4.2",
+    "mocha": "~2.3.4"
   }
 }
