@@ -5,6 +5,7 @@ import browserSync from 'browser-sync';
 import del from 'del';
 import {stream as wiredep} from 'wiredep';
 
+
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
