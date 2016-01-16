@@ -1,0 +1,21 @@
+{
+  "name": "hillscottc.github.io",
+  "homepage": "https://github.com/hillscottc/hillscottc.github.io",
+  "authors": [
+    "Scott Hill <scott289@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}
