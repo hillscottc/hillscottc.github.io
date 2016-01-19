@@ -3,5 +3,5 @@ node_modules
 .idea/
 .tmp
 .sass-cache
-bower_components
+#bower_components
 test/bower_components
