@@ -1,7 +1,22 @@
 body {
   padding-top: 50px;
 }
-.starter-template {
-  padding: 40px 15px;
+
+header p {
   text-align: center;
 }
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+h3 {
+  border: 1px double gray;
+}
+
+section section {
+  border: 1px double gray;
+  padding: 5px;
+  margin: 5px;
+}
+
