@@ -6,13 +6,10 @@ header p {
   text-align: center;
 }
 
-h1, h2, h3 {
+h1 {
   text-align: center;
 }
 
-h3 {
-  border: 1px double gray;
-}
 
 section section {
   border: 1px double gray;
