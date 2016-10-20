@@ -10,6 +10,11 @@ h1 {
   text-align: center;
 }
 
+.proj {
+    font-weight: bold;
+    font-size: larger;
+}
+
 
 section section {
   border: 1px double gray;
